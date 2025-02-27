@@ -36,7 +36,12 @@ public class Episode04 : MonoBehaviour
 
     void Start()
     {
-
+        _topGroup.gameObject.SetActive(true);
+        _betButtonGroup.gameObject.SetActive(true);
+        _hiLoButtonGroup.gameObject.SetActive(false);
+        _seatGroup.gameObject.SetActive(true);
+        _amountGroup.gameObject.SetActive(true);
+        _choiceGroup.gameObject.SetActive(false);
     }
 
     private void Event_OnResTimer(object sender, ResTimer e)
@@ -111,28 +116,11 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
     }
 
-    private void Event_OnResEnableBet(object sender, ResEnableBet e)
-    {
-        Debug.Log("Event_OnResEnableBet");
-        Debug.Log(e);
-        _betButtonGroup.EnableBet(e);
-    }
 
-    private void Event_OnResDealStreet3Card(object sender, ResDealStreet3Card e)
-    {
-        Debug.Log("Event_OnResDealStreet3Card");
-        Debug.Log(e);
-    }
 
     private void Event_OnResDealCard(object sender, ResDealCard e)
     {
         Debug.Log("Event_OnResDealCard");
-        Debug.Log(e);
-    }
-
-    private void Event_OnResBullBearReady(object sender, ResBullBearReady e)
-    {
-        Debug.Log("Event_OnResBullBearReady");
         Debug.Log(e);
     }
 
@@ -155,7 +143,6 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResBullBearReady += Event_OnResBullBearReady;
         GameManager.Event.OnResDealCard += Event_OnResDealCard;
         GameManager.Event.OnResDealStreet3Card += Event_OnResDealStreet3Card;
-        GameManager.Event.OnResEnableBet += Event_OnResEnableBet;
         GameManager.Event.OnResGameStart += Event_OnResGameStart;
         GameManager.Event.OnResJoinPlayer += Event_OnResJoinPlayer;
         GameManager.Event.OnResLeave += Event_OnResLeave;
@@ -177,7 +164,6 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResBullBearReady -= Event_OnResBullBearReady;
         GameManager.Event.OnResDealCard -= Event_OnResDealCard;
         GameManager.Event.OnResDealStreet3Card -= Event_OnResDealStreet3Card;
-        GameManager.Event.OnResEnableBet -= Event_OnResEnableBet;
         GameManager.Event.OnResGameStart -= Event_OnResGameStart;
         GameManager.Event.OnResJoinPlayer -= Event_OnResJoinPlayer;
         GameManager.Event.OnResLeave -= Event_OnResLeave;
@@ -190,5 +176,22 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResStartStreet -= Event_OnResStartStreet;
         GameManager.Event.OnResStreetBoss -= Event_OnResStreetBoss;
         GameManager.Event.OnResTimer -= Event_OnResTimer;
+    }
+
+
+    private void Event_OnResBullBearReady(object sender, ResBullBearReady e)
+    {
+        Debug.Log("Event_OnResBullBearReady");
+        Debug.Log(e);
+        _betButtonGroup.gameObject.SetActive(false);
+        _hiLoButtonGroup.gameObject.SetActive(true);
+    }
+
+    private void Event_OnResDealStreet3Card(object sender, ResDealStreet3Card e)
+    {
+        Debug.Log("Event_OnResDealStreet3Card");
+        Debug.Log(e);
+        _choiceGroup.gameObject.SetActive(true);
+        _choiceGroup.Event_OnResDealStreet3Card(e);
     }
 }

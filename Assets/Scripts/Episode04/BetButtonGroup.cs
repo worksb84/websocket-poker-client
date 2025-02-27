@@ -1,3 +1,7 @@
+using NUnit.Framework;
+using Pbm;
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,12 +23,39 @@ public class BetButtonGroup : MonoBehaviour
     public BetButton AllinButton { get { return _allinButton; } set { _allinButton = value; } }
     public BetButton FoldButton { get { return _foldButton; } set { _foldButton = value; } }
 
+    private List<BetButton> _betButtons = new();
+
     void Start()
     {
+        _betButtons.Clear();
+        _betButtons.Add(_checkButton);
+        _betButtons.Add(_anteButton);
+        _betButtons.Add(_callButton);
+        _betButtons.Add(_halfButton);
+        _betButtons.Add(_fullButton);
+        _betButtons.Add(_allinButton);
+        _betButtons.Add(_foldButton);
+
+        foreach (var betButton in _betButtons)
+        {
+            betButton.Initialize();
+            betButton.Disable();
+        }
     }
 
-    public void EnableBet(Pbm.ResEnableBet e)
+    private void OnEnable()
     {
+        GameManager.Event.OnResEnableBet += Event_OnResEnableBet;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Event.OnResEnableBet -= Event_OnResEnableBet;
+    }
+
+    private void Event_OnResEnableBet(object sender, ResEnableBet e)
+    {
+        Enable();
         foreach (var bet in e.EnableBet)
         {
             switch (bet.Bet)
@@ -32,29 +63,46 @@ public class BetButtonGroup : MonoBehaviour
                 case Pbm.Bet.Buyin:
                     break;
                 case Pbm.Bet.Check:
-                    _checkButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _checkButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Bbing:
-                    _anteButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _anteButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Half:
-                    _halfButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _halfButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Full:
-                    _fullButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _fullButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Allin:
-                    _allinButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _allinButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Fold:
-                    _foldButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _foldButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 case Pbm.Bet.Call:
-                    _callButton.SetButton(bet.Bet, bet.Chips, bet.Enable);
+                    _callButton.SetButton(bet.Bet, bet.Chips, bet.Enable, this);
                     break;
                 default:
                     break;
             }
+        }
+    }
+
+    private void Enable()
+    {
+        foreach (var betButton in _betButtons)
+        {
+            betButton.Initialize();
+        }
+    }
+
+    internal void Disable()
+    {
+        foreach (var betButton in _betButtons)
+        {
+            betButton.Initialize();
+            betButton.Disable();
         }
     }
 }

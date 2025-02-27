@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,6 +14,8 @@ public class Seat : MonoBehaviour
     [SerializeField] private TMP_Text _resultAmount;
     [SerializeField] private TMP_Text _waitPlayerText;
     [SerializeField] private GameObject _cardGroup;
+    [SerializeField] private Slider _slider;
+    [SerializeField] private TMP_Text _timerText;
 
     public Image ProfileImage { get { return _profileImage; } set { _profileImage = value; } }
     public TMP_Text NameText { get { return _nameText; } set { _nameText = value; } }
@@ -23,4 +26,12 @@ public class Seat : MonoBehaviour
     public TMP_Text ResultAmount { get { return _resultAmount; } set { _resultAmount = value; } }
     public TMP_Text WaitPlayerText { get { return _waitPlayerText; } set { _waitPlayerText = value; } }
     public GameObject CardGroup { get { return _cardGroup; } set { _cardGroup = value; } }
+    public Slider Slider { get { return _slider; } set { _slider = value; } }
+    public TMP_Text TimerText { get { return _timerText; } set { _timerText = value; } }
+
+    private void Start()
+    {
+        _slider.value = 0f;
+        _slider.DOValue(1f, 1f).SetEase(Ease.Linear).SetLoops(-1);
+    }
 }

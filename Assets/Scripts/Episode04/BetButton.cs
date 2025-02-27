@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,24 +11,42 @@ public class BetButton : MonoBehaviour
     public TMP_Text BetText { get { return _betText; } set { _betText = value; } }
     public TMP_Text BetAmount { get { return _betAmount; } set { _betAmount = value; } }
 
-    internal void SetButton(Pbm.Bet bet, uint chips, bool enable)
+    internal void Initialize()
+    {
+        _betAmount.text = string.Empty;
+        _betAmount.gameObject.SetActive(false);
+    }
+
+    internal void SetButton(Pbm.Bet bet, uint chips, bool enable, BetButtonGroup betButtonGroup)
     {
         var button = gameObject.GetComponent<Button>();
         button.onClick.RemoveAllListeners();
         if (enable)
         {
             Debug.Log(enable);
+            Enable();
             _betText.text = chips.ToString();
-            button.onClick.AddListener(() => Bet(bet, chips));
+            button.onClick.AddListener(() => Bet(bet, chips, betButtonGroup));
         }
         else
         {
-            Debug.Log(enable);
+            Disable();
         }
     }
 
+    private void Enable()
+    {
+        gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+        gameObject.GetComponent<Button>().enabled = true;
+    }
 
-    private void Bet(Pbm.Bet bet, uint chips)
+    internal void Disable()
+    {
+        gameObject.GetComponent<Image>().color = new Color32(255, 255, 255, 50);
+        gameObject.GetComponent<Button>().enabled = false;
+    }
+
+    private void Bet(Pbm.Bet bet, uint chips, BetButtonGroup betButtonGroup)
     {
         var req = new Pbm.ReqBet() {
             Bet = bet,
@@ -40,5 +59,6 @@ public class BetButton : MonoBehaviour
         };
 
         GameManager.Network.Send(req);
+        betButtonGroup.Disable();
     }
 }
