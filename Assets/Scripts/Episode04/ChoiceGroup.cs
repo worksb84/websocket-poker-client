@@ -68,4 +68,10 @@ public class ChoiceGroup : MonoBehaviour
         _timer.SetActive(true);
         timer.DOSizeDelta(new Vector2(0f, 15f), 5f).SetEase(Ease.Linear).SetLoops(-1);
     }
+
+    private void StopTimer()
+    {
+        var timer = _timer.GetComponent<RectTransform>();
+        timer.DOKill();
+    }
 }

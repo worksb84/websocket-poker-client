@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Seat : MonoBehaviour
 {
+    [SerializeField] private Pbm.Seat _seat;
     [SerializeField] private Image _profileImage;
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private TMP_Text _rateText;
@@ -31,7 +32,22 @@ public class Seat : MonoBehaviour
 
     private void Start()
     {
+        StartTimer();
+    }
+
+    private void SetSeat(Pbm.Seat seat)
+    {
+        _seat = seat;
+    }
+
+    private void StartTimer()
+    {
         _slider.value = 0f;
         _slider.DOValue(1f, 1f).SetEase(Ease.Linear).SetLoops(-1);
+    }
+
+    private void StopTimer()
+    {
+        _slider.DOKill();
     }
 }

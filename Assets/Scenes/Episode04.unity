@@ -6991,7 +6991,7 @@ GameObject:
   - component: {fileID: 684112623}
   - component: {fileID: 684112624}
   m_Layer: 5
-  m_Name: Seat5
+  m_Name: Seat3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8503,7 +8503,7 @@ GameObject:
   - component: {fileID: 864561970}
   - component: {fileID: 864561969}
   m_Layer: 5
-  m_Name: Seat1
+  m_Name: Seat4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8638,7 +8638,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.64289945, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9683,7 +9683,7 @@ GameObject:
   - component: {fileID: 980087373}
   - component: {fileID: 980087372}
   m_Layer: 5
-  m_Name: Seat2
+  m_Name: Seat5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10545,7 +10545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.64289945, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -10831,11 +10831,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52624806cc8f4541a3d3f1a44e34a6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _seat1: {fileID: 864561969}
-  _seat2: {fileID: 980087372}
-  _seat3: {fileID: 1396332312}
-  _seat4: {fileID: 1143890450}
-  _seat5: {fileID: 684112624}
+  _seat1: {fileID: 1396332312}
+  _seat2: {fileID: 1143890450}
+  _seat3: {fileID: 684112624}
+  _seat4: {fileID: 864561969}
+  _seat5: {fileID: 980087372}
 --- !u!1 &1143890448
 GameObject:
   m_ObjectHideFlags: 0
@@ -10849,7 +10849,7 @@ GameObject:
   - component: {fileID: 1143890451}
   - component: {fileID: 1143890450}
   m_Layer: 5
-  m_Name: Seat4
+  m_Name: Seat2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12524,7 +12524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.64289945, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -13973,7 +13973,7 @@ GameObject:
   - component: {fileID: 1396332310}
   - component: {fileID: 1396332312}
   m_Layer: 5
-  m_Name: Seat3
+  m_Name: Seat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18309,7 +18309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.64289945, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -20742,7 +20742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.64289945, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
