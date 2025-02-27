@@ -1,9 +1,8 @@
-using Google.Protobuf;
 using System.Collections.Generic;
 
 public class BufferQueue
 {
-    object _lock = new object();
+    object _lock = new();
     public static BufferQueue Instance { get; } = new BufferQueue();
     private Queue<Pbm.Message> _buffer = new();
 
