@@ -1,0 +1,274 @@
+syntax = "proto3";
+option go_package = "pkg/pbm";
+option csharp_namespace = "Pbm";
+
+enum ID {
+    None                                            = 0;
+    Testing                                         = 1;
+    
+    Res_Ready                                       = 4000;
+    Res_GameStart                                   = 4001;
+    Res_ShuffleCard                                 = 4002;
+    Res_DealStreet3Card                             = 4003;
+    Req_SelectOpenCard                              = 4004;
+    Res_SelectOpenCard                              = 4005;
+    Res_StreetBoss                                  = 4006;
+    Res_StartStreet                                 = 4007;
+    Req_Bet                                         = 4008;
+    Res_Bet                                         = 4009;
+    Res_DealCard                                    = 4010;
+    Res_BullBearReady                               = 4011;
+    Req_BullBear                                    = 4012;
+    Res_BullBear                                    = 4013;
+    Res_Result                                      = 4014;
+    Req_Leave                                       = 4015;
+    Res_Leave                                       = 4016;
+    Req_MoveRoom                                    = 4017;
+    Res_MoveRoom                                    = 4018;
+    Res_EnableBet                                   = 4019;
+    Res_OtherPlayers                                = 4020;
+    Res_JoinPlayer                                  = 4021;
+    Res_Timer                                       = 4022;
+
+    Res_Countdown                                   = 9999;
+}
+
+enum Game {
+    seven                                           = 0;
+	bullBear                                        = 1;
+	skeleton                                        = 2;
+	midusTouch                                      = 3;
+}
+
+enum Bet {
+    buyin                                           = 0;
+	check                                           = 1;
+	bbing                                           = 2;
+	half                                            = 3;
+	full                                            = 4;
+	allin                                           = 5;
+	fold                                            = 6;
+	call                                            = 7;
+}
+
+enum BullBearBet {
+    bullBearNone                                    = 0;
+    bull                                            = 1;
+	swing                                           = 2;
+	bear                                            = 3;
+}
+
+enum SeatStatus {
+    ready                                           = 0;
+	play                                            = 1;
+	leave                                           = 2;
+}
+
+message TableInformation {
+    string tableId                                  = 1;
+    Game game                                       = 2;
+    string region                                   = 3;
+    uint32 ante                                     = 4;
+    uint32 usedSeat                                 = 5;
+    uint32 maxSeat                                  = 6;
+}
+
+message ReqGenerateTable {
+    TableInformation tableInformation               = 1;
+}
+
+message ResTables {
+    repeated TableInformation tableInformations     = 1;
+}
+
+message ResGenerateTable {
+    TableInformation tableInformations              = 1;
+}
+
+message Card {
+    string n                                        = 1;
+    string ne                                       = 2;
+    string s                                        = 3;
+    string e                                        = 4;
+    double c                                        = 5;
+    double cr                                       = 6;
+    double pcp                                      = 7;
+    double cp                                       = 8;
+    double op                                       = 9;
+    double hp                                       = 10;
+    double lp                                       = 11;
+}
+
+message Snapshots {
+    repeated Card snapshots                         = 1;
+}
+
+message Cards {
+    repeated Card cards                             = 1;
+}
+
+
+message PlayerAction {
+    Bet bet                                         = 1;
+    uint32 chips                                    = 2;
+}
+
+message HoldCard {
+    Card card                                       = 1;
+    bool conceal                                    = 2;
+}
+
+
+message Player {
+    string name                                     = 1;
+    repeated PlayerAction playerActions             = 2;
+    repeated HoldCard holdCards                     = 3;
+    bool isFold                                     = 4;
+    bool isAllin                                    = 5;
+    bool isBoss                                     = 6;
+    bool out                                        = 7;
+    double score                                    = 8;
+    uint32 chips                                    = 9;
+    uint32 betChips                                 = 10;
+    BullBearBet bullBearBet                         = 11;
+    SeatStatus seatStatus                           = 12;
+}
+
+message Message {
+    int32 id                                        = 1;
+    string body                                     = 2;
+}
+
+message Seat {
+    int32 uid                                       = 1;
+    int32 seat                                      = 2;
+    double rate                                     = 3;
+    SeatStatus seatStatus                           = 4;
+}
+
+message ReqEnterGameRoom {
+
+}
+
+message ResEnterGameRoom {
+
+}
+
+message ResReady {
+    Seat seat                                       = 1;
+}
+
+message ResGameStart {
+
+}
+
+message ResShuffleCard {
+
+}
+
+message ResDealStreet3Card {
+    repeated Card cards                             = 1;
+}
+
+message SelectOpenCard {
+    Seat seat                                       = 1;
+    string symbol                                   = 2;
+}
+
+message ReqSelectOpenCard {
+    SelectOpenCard selectOpenCard                   = 1;
+}
+
+message ResSelectOpenCard {
+    repeated SelectOpenCard selectOpenCards         = 1;
+}
+
+message ResStreetBoss {
+    Seat seat                                       = 1;
+}
+
+message ResStartStreet {
+
+}
+
+message ReqBet {
+    Seat seat                                       = 1;
+    Bet bet                                         = 2;
+    fixed32 chips                                   = 3;
+}
+
+message ResBet {
+    Seat seat                                       = 1;
+    Bet bet                                         = 2;
+    fixed32 chips                                   = 3;
+}
+
+message ResDealCard {
+    Card cards                                      = 1;
+}
+
+message ResBullBearReady {
+
+}
+
+message ReqBullBear {
+    Seat seat                                       = 1;
+    BullBearBet bullBearBet                         = 2;
+}
+
+message ResBullBear {
+    Seat seat                                       = 1;
+}
+
+message ResResult {
+    Seat seat                                       = 1;
+    double amount                                   = 3;
+}
+
+message ReqLeave {
+    Seat seat                                       = 1;
+}
+
+message ResLeave {
+    Seat seat                                       = 1;
+}
+
+message ReqMoveRoom {
+    Seat seat                                       = 1;
+}
+
+message ResMoveRoom {
+    Seat seat                                       = 1;
+}
+
+message EnableBet {
+    Bet bet                                         = 1;
+    uint32 chips                                    = 2;
+    bool enable                                     = 3;
+}
+
+message ResEnableBet {
+    repeated EnableBet enableBet                    = 1;
+}
+
+message TableConfig {
+    string tableId                                  = 1;
+    Game game                                       = 2;
+    string region                                   = 3;
+    int32 maxSeat                                   = 4;
+    int32 cardLimit                                 = 5;
+    uint32 ante                                     = 6;
+}
+
+message ResOtherPlayers {
+    repeated Player players                         = 1;
+}
+
+message ResJoinPlayer {
+    Player players                                  = 1;
+}
+
+message ResTimer {
+    Seat seat                                       = 1;
+    int32 time                                      = 2;
+}
