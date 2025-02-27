@@ -115,6 +115,7 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResEnableBet");
         Debug.Log(e);
+        _betButtonGroup.EnableBet(e);
     }
 
     private void Event_OnResDealStreet3Card(object sender, ResDealStreet3Card e)
