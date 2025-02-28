@@ -1,3 +1,4 @@
+using System;
 using Pbm;
 using UnityEngine;
 
@@ -33,6 +34,7 @@ public class Episode04 : MonoBehaviour
     [SerializeField] private SeatGroup _seatGroup;
     [SerializeField] private AmountGroup _amountGroup;
     [SerializeField] private ChoiceGroup _choiceGroup;
+    [SerializeField] private ShuffleGroup _shuffleGroup;
 
     void Start()
     {
@@ -42,6 +44,8 @@ public class Episode04 : MonoBehaviour
         _seatGroup.gameObject.SetActive(true);
         _amountGroup.gameObject.SetActive(true);
         _choiceGroup.gameObject.SetActive(false);
+
+        _shuffleGroup.StartShuffle();
     }
 
     private void Event_OnResTimer(object sender, ResTimer e)
@@ -65,12 +69,6 @@ public class Episode04 : MonoBehaviour
     private void Event_OnResShuffleCard(object sender, ResShuffleCard e)
     {
         Debug.Log("Event_OnResShuffleCard");
-        Debug.Log(e);
-    }
-
-    private void Event_OnResSelectOpenCard(object sender, ResSelectOpenCard e)
-    {
-        Debug.Log("Event_OnResSelectOpenCard");
         Debug.Log(e);
     }
 
@@ -193,5 +191,11 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
         _choiceGroup.gameObject.SetActive(true);
         _choiceGroup.Event_OnResDealStreet3Card(e);
+    }
+
+    private void Event_OnResSelectOpenCard(object sender, ResSelectOpenCard e)
+    {
+        Debug.Log("Event_OnResSelectOpenCard");
+        Debug.Log(e);
     }
 }

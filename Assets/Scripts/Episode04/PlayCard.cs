@@ -3,6 +3,11 @@ using UnityEngine.UI;
 
 public class PlayCard : Card
 {
+    public override void SetFlip(bool flip)
+    {
+        Back.SetActive(!flip);
+    }
+
     public override void SetCard(Pbm.Card card)
     {
         Name.text = card.N;
@@ -17,7 +22,6 @@ public class PlayCard : Card
     {
         var rect = gameObject.GetComponent<RectTransform>();
         rect.anchoredPosition = new Vector2(x, 0f);
-
     }
 
     internal void SetAction(string symbol, ChoiceGroup choiceGroup)

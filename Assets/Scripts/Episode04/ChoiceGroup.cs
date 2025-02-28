@@ -8,7 +8,7 @@ public class ChoiceGroup : MonoBehaviour
     [SerializeField] private PlayCard _playCard1;
     [SerializeField] private PlayCard _playCard2;
     [SerializeField] private PlayCard _playCard3;
-    [SerializeField] private GameObject _timer;
+    [SerializeField] private RectTransform _timer;
 
     private List<PlayCard> _playCards = new();
 
@@ -23,7 +23,7 @@ public class ChoiceGroup : MonoBehaviour
         _playCards.Add(_playCard2);
         _playCards.Add(_playCard3);
 
-        _timer.SetActive(false);
+        _timer.gameObject.SetActive(false);
         StartTimer();
     }
     private void OnEnable()
@@ -38,9 +38,13 @@ public class ChoiceGroup : MonoBehaviour
 
     private void Event_OnResTimer(object sender, ResTimer e)
     {
-        if(e.Time == 5)
+        if (e.Time == 5)
         {
             StartTimer();
+        }
+        if (e.Time <= 0)
+        {
+            StopTimer();
         }
     }
 
@@ -51,6 +55,7 @@ public class ChoiceGroup : MonoBehaviour
             _playCards[i].SetCard(e.Cards[i]);
             _playCards[i].SetPosition(i * 240f);
             _playCards[i].SetAction(e.Cards[i].S, this);
+            _playCards[i].SetFlip(true);
         }
     }
 
@@ -61,15 +66,14 @@ public class ChoiceGroup : MonoBehaviour
 
     private void StartTimer()
     {
-        var timer = _timer.GetComponent<RectTransform>();
-        timer.sizeDelta = new Vector2(700f, 15f);
-        _timer.SetActive(true);
-        timer.DOSizeDelta(new Vector2(0f, 15f), 5f).SetEase(Ease.Linear).SetLoops(-1);
+        _timer.sizeDelta = new Vector2(700f, 15f);
+        _timer.gameObject.SetActive(true);
+        _timer.DOSizeDelta(new Vector2(0f, 15f), 5f).SetEase(Ease.Linear).SetLoops(-1);
     }
 
     private void StopTimer()
     {
-        var timer = _timer.GetComponent<RectTransform>();
-        timer.DOKill();
+        _timer.DOKill();
+        _timer.gameObject.SetActive(false);
     }
 }
