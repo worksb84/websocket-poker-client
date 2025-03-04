@@ -1,8 +1,8 @@
 using DG.Tweening;
-using Google.Protobuf.WellKnownTypes;
-using System;
+using Pbm;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class ShuffleGroup : MonoBehaviour
 {
@@ -21,8 +21,8 @@ public class ShuffleGroup : MonoBehaviour
             int segments = 50;
             path = new Vector3[segments + 1];
 
-            var aX = UnityEngine.Random.Range(-200, 200);
-            var aY = UnityEngine.Random.Range(-200, 200);
+            var aX = Random.Range(-200, 200);
+            var aY = Random.Range(-200, 200);
 
             for (int i = 0; i <= segments; i++)
             {
@@ -32,9 +32,9 @@ public class ShuffleGroup : MonoBehaviour
                 float y = rect.anchoredPosition.y + aY * Mathf.Sin(angle);
                 path[i] = new Vector3(x, y, 0f);
             }
-            var r = UnityEngine.Random.Range(0, segments + 1);
+            var r = Random.Range(0, segments + 1);
             var pos = path[r];
-            var rot = new Vector3(0f, 0f, UnityEngine.Random.Range(-360, 360));
+            var rot = new Vector3(0f, 0f, Random.Range(-360, 360));
             sequence.Append(rect.DOAnchorPos(new Vector2(pos.x, pos.y), 0.5f));
             sequence.Join(rect.DORotate(rot, 0.5f));
 
@@ -49,10 +49,10 @@ public class ShuffleGroup : MonoBehaviour
                 path[i] = new Vector3(x, y, 0f);
             }
 
-            rot = new Vector3(0f, 0f, UnityEngine.Random.Range(-720, 720));
-            sequence.Append(rect.DOPath(path, 1f, PathType.Linear).SetDelay(UnityEngine.Random.Range(0f, 0.3f)).SetOptions(AxisConstraint.Z).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo));
-            sequence.Join(rect.DORotate(rot, 0.5f).SetEase(Ease.Linear).SetLoops(-1, LoopType.Yoyo));
-            sequence.SetLoops(-1).SetEase(Ease.Linear);
+            rot = new Vector3(0f, 0f, Random.Range(-720, 720));
+            sequence.Append(rect.DOPath(path, 1f, PathType.Linear).SetDelay(Random.Range(0f, 0.3f)).SetOptions(AxisConstraint.Z).SetEase(Ease.Linear));
+            sequence.Join(rect.DORotate(rot, 0.5f).SetEase(Ease.Linear));
+            sequence.SetLoops(-1, LoopType.Yoyo);
             sequence.Play();
         }
     }

@@ -1,3 +1,6 @@
+using Pbm;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -20,10 +23,30 @@ public class SeatGroup : MonoBehaviour
     private void Start()
     {
         _seats.Clear();
+        _seats.Add(_seat4);
+        _seats.Add(_seat5);
         _seats.Add(_seat1);
         _seats.Add(_seat2);
         _seats.Add(_seat3);
-        _seats.Add(_seat4);
-        _seats.Add(_seat5);
+
+        Deal(7);
+    }
+
+    internal void Deal(int v)
+    {
+        StartCoroutine(DealCard(v));
+    }
+
+    IEnumerator DealCard(int v)
+    {
+        yield return new WaitForSeconds(0.2f);
+        for (int i = 0; i < v; i++)
+        {
+            foreach (var seat in _seats)
+            {
+                seat.Deal();
+                yield return new WaitForSeconds(0.2f);
+            }
+        }
     }
 }
