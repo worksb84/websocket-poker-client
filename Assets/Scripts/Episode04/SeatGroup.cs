@@ -48,5 +48,15 @@ public class SeatGroup : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
             }
         }
+
+        yield return new WaitForSeconds(v * 0.2f);
+        for (int i = 0; i < v; i++)
+        {
+            foreach (var seat in _seats)
+            {
+                seat.DealSort();
+            }
+        }
+
     }
 }

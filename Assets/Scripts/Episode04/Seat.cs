@@ -1,9 +1,14 @@
 using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
+using NUnit.Framework;
 using Pbm;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
+using static UnityEngine.Rendering.DebugUI.Table;
+using Unity.VisualScripting;
 
 public class Seat : MonoBehaviour
 {
@@ -38,6 +43,7 @@ public class Seat : MonoBehaviour
     public TMP_Text TimerText { get { return _timerText; } set { _timerText = value; } }
 
     private int _dealCardCount = 0;
+    private List<GameObject> _dealCards = new();
 
     private void Start()
     {
@@ -62,6 +68,7 @@ public class Seat : MonoBehaviour
 
         var card = GameManager.Resource.Instantiate("Prefabs/PlayCard");
         card.transform.SetParent(gameObject.transform.root.root.root, false);
+        _dealCards.Add(card);
 
         var gap = _isSelf ? 75f : 46.67f;
         var scale = _isSelf ? 1f : 0.6365f;
@@ -72,13 +79,18 @@ public class Seat : MonoBehaviour
         cardRectTransform.pivot = new Vector2(0, 0.5f);
         cardRectTransform.localScale = Vector3.one * scale;
         cardRectTransform.anchoredPosition = new Vector2(0, 800f);
-        cardRectTransform.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), 0.2f).SetEase(Ease.OutQuad);
+
+        var sequence = DOTween.Sequence();
+        sequence.Append(cardRectTransform.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), 0.2f));
+        sequence.Join(cardRectTransform.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), 0.2f));
+        sequence.Play();
 
         _dealCardCount++;
     }
 
     private void Initialize()
     {
+        _dealCards.Clear();
         _dealCardCount = 0;
         _profileImage.sprite = null;
         _nameText.text = string.Empty;
@@ -94,7 +106,6 @@ public class Seat : MonoBehaviour
         }
         _timerGroup.SetActive(false);
         _resultGroup.SetActive(false);
-
     }
 
     private void OnEnable()
@@ -140,5 +151,14 @@ public class Seat : MonoBehaviour
         _timerGroup.SetActive(false);
         _timerText.gameObject.SetActive(false);
         _slider.DOKill();
+    }
+
+    internal void DealSort()
+    {
+        foreach (var card in _dealCards)
+        {
+            var cardRectTransform = card.GetComponent<RectTransform>();
+            cardRectTransform.DORotate(Vector3.zero, 0.2f);
+        }
     }
 }
