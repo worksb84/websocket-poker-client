@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class AmountGroup : MonoBehaviour
 {
+    [Header("Texts")]
     [SerializeField] private TMP_Text _totalAmount;
     [SerializeField] private TMP_Text _callAmount;
 

@@ -4,6 +4,7 @@ using UnityEngine.UI;
 
 public class BetButton : MonoBehaviour
 {
+    [Header("Texts")]
     [SerializeField] private TMP_Text _betText;
     [SerializeField] private TMP_Text _betAmount;
 

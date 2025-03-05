@@ -9,21 +9,28 @@ using Random = UnityEngine.Random;
 
 public class Seat : MonoBehaviour
 {
+    [Header("Properties")]
     [SerializeField] private bool _isSelf = false;
     [SerializeField] private Pbm.Seat _seat;
+
+    [Header("Images")]
     [SerializeField] private Image _profileImage;
+    [SerializeField] private Image _betImage;
+
+    [Header("Texts")]
     [SerializeField] private TMP_Text _nameText;
     [SerializeField] private TMP_Text _rateText;
     [SerializeField] private TMP_Text _previousBetAmount;
-    [SerializeField] private Image _betImage;
     [SerializeField] private TMP_Text _resultText;
     [SerializeField] private TMP_Text _resultAmount;
     [SerializeField] private TMP_Text _waitPlayerText;
+    [SerializeField] private TMP_Text _timerText;
+
+    [Header("GameObjects")]
     [SerializeField] private GameObject _cardGroup;
     [SerializeField] private GameObject _timerGroup;
     [SerializeField] private GameObject _resultGroup;
     [SerializeField] private Slider _slider;
-    [SerializeField] private TMP_Text _timerText;
     [SerializeField] private GameObject _dealCardGroup;
 
     public bool IsSelf { get { return _isSelf; } set { _isSelf = value; } }
@@ -46,51 +53,25 @@ public class Seat : MonoBehaviour
     private int _dealCardCount = 0;
     private List<GameObject> _dealCards = new();
 
+    private void OnEnable()
+    {
+        GameManager.Event.OnResTimer += Event_OnResTimer;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Event.OnResTimer -= Event_OnResTimer;
+    }
+
     private void Start()
     {
         StartTimer();
         Initialize();
     }
 
-    public void Deal()
-    {
-        StartCoroutine(DealCard());
-    }
-
-    IEnumerator DealCard()
-    {
-        yield return new WaitForSeconds(0.01f);
-        var rect = _cardGroup.GetComponent<RectTransform>();
-        var root = gameObject.transform.root.root.GetComponent<RectTransform>();
-
-        var bound = RectTransformUtility.CalculateRelativeRectTransformBounds(root, rect);
-        var cX = bound.center.x - bound.extents.x;
-        var cY = bound.center.y;
-
-        var card = GameManager.Resource.Instantiate("Prefabs/PlayCard");
-        card.transform.SetParent(_dealCardGroup.transform, false);
-        _dealCards.Add(card);
-
-        var gap = _isSelf ? 75f : 46.67f;
-        var scale = _isSelf ? 1f : 0.6365f;
-
-        var cardRectTransform = card.GetComponent<RectTransform>();
-        cardRectTransform.anchorMin = Vector2.one * 0.5f;
-        cardRectTransform.anchorMax = Vector2.one * 0.5f;
-        cardRectTransform.pivot = new Vector2(0, 0.5f);
-        cardRectTransform.localScale = Vector3.one * scale;
-        cardRectTransform.anchoredPosition = new Vector2(0, 800f);
-
-        var sequence = DOTween.Sequence();
-        sequence.Append(cardRectTransform.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), 0.2f));
-        sequence.Join(cardRectTransform.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), 0.2f));
-        sequence.Play();
-
-        _dealCardCount++;
-    }
-
     private void Initialize()
     {
+        _seat = new Pbm.Seat() { Seat_ = -1, Uid = -1, Rate = 0 };
         _dealCards.Clear();
         _dealCardCount = 0;
         _profileImage.sprite = null;
@@ -109,14 +90,36 @@ public class Seat : MonoBehaviour
         _resultGroup.SetActive(false);
     }
 
-    private void OnEnable()
+    internal IEnumerator SetStreet3Card()
     {
-        GameManager.Event.OnResTimer += Event_OnResTimer;
-    }
+        yield return new WaitForSeconds(0.01f);
+        var rect = _cardGroup.GetComponent<RectTransform>();
+        var root = gameObject.transform.root.root.GetComponent<RectTransform>();
 
-    private void OnDisable()
-    {
-        GameManager.Event.OnResTimer -= Event_OnResTimer;
+        var bound = RectTransformUtility.CalculateRelativeRectTransformBounds(root, rect);
+        var cX = bound.center.x - bound.extents.x;
+        var cY = bound.center.y;
+
+        var card = GameManager.Resource.Instantiate("Prefabs/PlayCard");
+        card.transform.SetParent(_dealCardGroup.transform, false);
+        _dealCards.Add(card);
+
+        var gap = _isSelf ? 75f : 46.67f;
+        var scale = _isSelf ? 1f : 0.6365f;
+
+        var cardRect = card.GetComponent<RectTransform>();
+        cardRect.anchorMin = Vector2.one * 0.5f;
+        cardRect.anchorMax = Vector2.one * 0.5f;
+        cardRect.pivot = new Vector2(0, 0.5f);
+        cardRect.localScale = Vector3.one * scale;
+        cardRect.anchoredPosition = new Vector2(0, 800f);
+
+        var seq = DOTween.Sequence();
+        seq.Append(cardRect.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), 0.2f));
+        seq.Join(cardRect.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), 0.2f));
+        seq.Play();
+
+        _dealCardCount++;
     }
 
     private void Event_OnResTimer(object sender, ResTimer e)
@@ -154,16 +157,16 @@ public class Seat : MonoBehaviour
         _slider.DOKill();
     }
 
-    internal void DealSort()
+    internal void SetSort()
     {
         foreach (var card in _dealCards)
         {
-            var cardRectTransform = card.GetComponent<RectTransform>();
-            cardRectTransform.DORotate(Vector3.zero, 0.2f);
+            var cardRect = card.GetComponent<RectTransform>();
+            cardRect.DORotate(Vector3.zero, 0.2f);
         }
     }
 
-    internal void SelectOpenCard(SelectOpenCard selectOpenCard)
+    internal void SetOpenCard(SelectOpenCard selectOpenCard)
     {
         var idx = _dealCards.FindIndex(x => { return x.GetComponent<PlayCard>().Card_.S == selectOpenCard.Symbol; });
         (_dealCards[2], _dealCards[idx]) = (_dealCards[idx], _dealCards[2]);
@@ -177,5 +180,15 @@ public class Seat : MonoBehaviour
             var dealCard = _dealCards[i].GetComponent<PlayCard>();
             dealCard.SetCard(e.Cards[i]);
         }
+    }
+
+    internal void SetBet(ResBet e)
+    {
+        throw new System.NotImplementedException();
+    }
+
+    internal void SetStreetBoss()
+    {
+        throw new System.NotImplementedException();
     }
 }

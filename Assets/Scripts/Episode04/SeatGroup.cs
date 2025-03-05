@@ -1,12 +1,12 @@
 using Pbm;
-using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SeatGroup : MonoBehaviour
 {
+    [Header("Seats")]
     [SerializeField] private Seat _seat1;
     [SerializeField] private Seat _seat2;
     [SerializeField] private Seat _seat3;
@@ -21,6 +21,8 @@ public class SeatGroup : MonoBehaviour
 
     private List<Seat> _seats = new();
 
+    [SerializeField] private float _waitForSeconds = 0.2f;
+
     private void Start()
     {
         _seats.Clear();
@@ -31,42 +33,62 @@ public class SeatGroup : MonoBehaviour
         _seats.Add(_seat3);
     }
 
-    internal void DealStreet3Card(int v, ResDealStreet3Card e)
-    {
-        StartCoroutine(DealCardAnimation(v, e));
-    }
 
-    IEnumerator DealCardAnimation(int v, ResDealStreet3Card e)
+    internal IEnumerator DealStreet3Card(ResDealStreet3Card e, UnityAction action)
     {
-        yield return new WaitForSeconds(0.2f);
-        for (int i = 0; i < v; i++)
+        yield return new WaitForSeconds(_waitForSeconds);
+        for (int i = 0; i < e.Cards.Count; i++)
         {
             foreach (var seat in _seats)
             {
-                seat.Deal();
-                yield return new WaitForSeconds(0.2f);
+                if (seat.Seat_.Seat_ != -1)
+                {
+                    StartCoroutine(seat.SetStreet3Card());
+                    yield return new WaitForSeconds(_waitForSeconds);
+                }
             }
         }
 
-        yield return new WaitForSeconds(v * 0.2f);
-        for (int i = 0; i < v; i++)
+        yield return new WaitForSeconds(e.Cards.Count * _waitForSeconds);
+        for (int i = 0; i < e.Cards.Count; i++)
         {
             foreach (var seat in _seats)
             {
-                seat.DealSort();
+                if (seat.Seat_.Seat_ != -1)
+                {
+                    seat.SetSort();
+                }
             }
         }
 
         var selfSeat = _seats.Find(x => x.IsSelf == true);
         selfSeat.SetCard(e);
+        action();
     }
 
     internal void SelectOpenCard(ResSelectOpenCard e)
     {
         foreach (var selectOpenCard in e.SelectOpenCards)
         {
-            var seat = _seats.Find(x => x.Seat_.Seat_ == selectOpenCard.Seat.Seat_);
-            seat.SelectOpenCard(selectOpenCard);
+            var seat = FindBySeat(selectOpenCard.Seat);
+            seat.SetOpenCard(selectOpenCard);
         }
+    }
+
+    internal void Bet(ResBet e)
+    {
+        var seat = FindBySeat(e.Seat);
+        seat.SetBet(e);
+    }
+
+    internal void StreetBoss(ResStreetBoss e)
+    {
+        var seat = FindBySeat(e.Seat);
+        seat.SetStreetBoss();
+    }
+
+    private Seat FindBySeat(Pbm.Seat seat)
+    {
+        return _seats.Find(x => x.Seat_.Seat_ == seat.Seat_);
     }
 }

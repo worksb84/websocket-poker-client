@@ -4,14 +4,21 @@ using UnityEngine.UI;
 
 public abstract class Card : MonoBehaviour
 {
+    [Header("Images")]
     [SerializeField] private Image _image;
+
+    [Header("Texts")]
     [SerializeField] private TMP_Text _name;
     [SerializeField] private TMP_Text _exchange;
     [SerializeField] private TMP_Text _symbol;
     [SerializeField] private TMP_Text _price;
     [SerializeField] private TMP_Text _change;
     [SerializeField] private TMP_Text _changeRate;
+
+    [Header("GameObjects")]
     [SerializeField] private GameObject _back;
+
+    [Header("Conceal")]
     [SerializeField] private bool _conceal = true;
 
     private Pbm.Card _card;
@@ -28,8 +35,6 @@ public abstract class Card : MonoBehaviour
     public Pbm.Card Card_ { get { return _card; } set { _card = value; } }
 
     public abstract void SetCard(Pbm.Card card);
-
-    public abstract void SetPosition(float x);
 
     public abstract void SetFlip(bool flip);
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BetButtonGroup : MonoBehaviour
 {
+    [Header("Buttons")]
     [SerializeField] private BetButton _checkButton;
     [SerializeField] private BetButton _anteButton;
     [SerializeField] private BetButton _callButton;

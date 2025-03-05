@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class LobbyBottomGroup : MonoBehaviour
 {
+    [Header("Buttons")]
     [SerializeField] private Button _profileButton;
     [SerializeField] private Button _itemShopButton;
     [SerializeField] private Button _exchangeButton;

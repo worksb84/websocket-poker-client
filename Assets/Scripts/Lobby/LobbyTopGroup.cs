@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class LobbyTopGroup : MonoBehaviour
 {
+    [Header("Images")]
     [SerializeField] private Image _profileImage;
+
+    [Header("Texts")]
     [SerializeField] private TMP_Text _profileNameText;
     [SerializeField] private TMP_Text _gameResultText;
     [SerializeField] private TMP_Text _moneyText;

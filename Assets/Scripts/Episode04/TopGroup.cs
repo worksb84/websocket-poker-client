@@ -4,7 +4,10 @@ using UnityEngine.UI;
 
 public class TopGroup : MonoBehaviour
 {
+    [Header("Texts")]
     [SerializeField] private TMP_Text _jackpotText;
+
+    [Header("Buttons")]
     [SerializeField] private Button _moveRoomButton;
     [SerializeField] private Button _leaveButton;
 

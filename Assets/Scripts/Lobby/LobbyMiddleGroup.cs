@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class LobbyMiddleGroup : MonoBehaviour
 {
+    [Header("Buttons")]
     [SerializeField] private Button _sevenButton;
     [SerializeField] private Button _bullishBearishButton;
     [SerializeField] private Button _skeletonButton;
     [SerializeField] private Button _midusTouchButton;
-
     [SerializeField] private Button _ante100RoomButton;
     [SerializeField] private Button _ante200RoomButton;
     [SerializeField] private Button _ante300RoomButton;

@@ -1,4 +1,4 @@
-using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class PlayCard : Card
@@ -19,26 +19,20 @@ public class PlayCard : Card
         ChangeRate.text = card.Cr.ToString("n2");
     }
 
-    public override void SetPosition(float x)
-    {
-        var rect = gameObject.GetComponent<RectTransform>();
-        rect.anchoredPosition = new Vector2(x, 0f);
-    }
-
-    internal void SetAction(string symbol, ChoiceGroup choiceGroup)
+    internal void SetAction(UnityAction action)
     {
         var button = gameObject.GetComponent<Button>();
         button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => { SelectOpenCard(symbol, choiceGroup); });
+        button.onClick.AddListener(() => { SelectOpenCard(action); });
     }
 
-    private void SelectOpenCard(string symbol, ChoiceGroup choiceGroup)
+    private void SelectOpenCard(UnityAction action)
     {
         var req = new Pbm.ReqSelectOpenCard()
         {
             SelectOpenCard = new Pbm.SelectOpenCard()
             {
-                Symbol = symbol,
+                Symbol = Card_.S,
                 Seat = new Pbm.Seat()
                 {
                     Uid = 1,
@@ -47,7 +41,7 @@ public class PlayCard : Card
             }
         };
 
-        choiceGroup.Disable();
+        action();
     }
 
     // 0.6365 Scale

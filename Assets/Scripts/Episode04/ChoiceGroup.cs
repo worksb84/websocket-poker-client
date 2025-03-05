@@ -2,12 +2,16 @@ using DG.Tweening;
 using Pbm;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ChoiceGroup : MonoBehaviour
 {
+    [Header("Cards")]
     [SerializeField] private PlayCard _playCard1;
     [SerializeField] private PlayCard _playCard2;
     [SerializeField] private PlayCard _playCard3;
+
+    [Header("Timer")]
     [SerializeField] private RectTransform _timer;
 
     private List<PlayCard> _playCards = new();
@@ -24,7 +28,6 @@ public class ChoiceGroup : MonoBehaviour
         _playCards.Add(_playCard3);
 
         _timer.gameObject.SetActive(false);
-        StartTimer();
     }
     private void OnEnable()
     {
@@ -40,7 +43,7 @@ public class ChoiceGroup : MonoBehaviour
     {
         if (e.Time == 5)
         {
-            StartTimer();
+            StartTimer(e.Time);
         }
         if (e.Time <= 0)
         {
@@ -48,23 +51,30 @@ public class ChoiceGroup : MonoBehaviour
         }
     }
 
-
-
-    internal void Disable()
-    {
-        gameObject.SetActive(false);
-    }
-
-    private void StartTimer()
+    private void StartTimer(int v)
     {
         _timer.sizeDelta = new Vector2(700f, 15f);
         _timer.gameObject.SetActive(true);
-        _timer.DOSizeDelta(new Vector2(0f, 15f), 5f).SetEase(Ease.Linear).SetLoops(-1);
+        _timer.DOSizeDelta(new Vector2(0f, 15f), v).SetEase(Ease.Linear);
     }
 
     private void StopTimer()
     {
         _timer.DOKill();
         _timer.gameObject.SetActive(false);
+    }
+
+    internal void SetCards(ResDealStreet3Card e)
+    {
+        for (int i = 0; i < e.Cards.Count; i++)
+        {
+            _playCards[i].SetCard(e.Cards[i]);
+            UnityAction action = () =>
+            {
+                gameObject.SetActive(false);
+                StopTimer();
+            };
+            _playCards[i].SetAction(action);
+        }
     }
 }

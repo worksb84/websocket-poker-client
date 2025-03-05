@@ -2,6 +2,7 @@ using UnityEngine;
 
 public abstract class LobbyRoom : MonoBehaviour
 {
+    [Header("Defines")]
     [SerializeField] private Pbm.Game _game;
     [SerializeField] private Define.GameRoomType _roomType;
     public Pbm.Game Game { get { return _game; } }

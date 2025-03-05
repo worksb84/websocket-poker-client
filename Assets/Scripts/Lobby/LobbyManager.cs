@@ -3,6 +3,8 @@ using UnityEngine;
 public class LobbyManager : MonoBehaviour
 {
     private static LobbyManager _instance;
+
+    [Header("Groups")]
     [SerializeField] private LobbyTopGroup _lobbyTopGroup;
     [SerializeField] private LobbyMiddleGroup _lobbyMiddleGroup;
     [SerializeField] private LobbyBottomGroup _lobbyBottomGroup;

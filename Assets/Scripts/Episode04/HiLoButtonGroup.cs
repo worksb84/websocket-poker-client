@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class HiLoButtonGroup : MonoBehaviour
 {
+    [Header("Buttons")]
     [SerializeField] private HiLoButton _highButton;
     [SerializeField] private HiLoButton _swingButton;
     [SerializeField] private HiLoButton _lowButton;

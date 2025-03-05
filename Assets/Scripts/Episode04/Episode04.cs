@@ -1,5 +1,6 @@
 using Pbm;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Episode04 : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class Episode04 : MonoBehaviour
         }
     }
 
+    [Header("Groups")]
     [SerializeField] private TopGroup _topGroup;
     [SerializeField] private BetButtonGroup _betButtonGroup;
     [SerializeField] private HiLoButtonGroup _hiLoButtonGroup;
@@ -58,17 +60,12 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResStreetBoss");
         Debug.Log(e);
+        _seatGroup.StreetBoss(e);
     }
 
     private void Event_OnResStartStreet(object sender, ResStartStreet e)
     {
         Debug.Log("Event_OnResStartStreet");
-        Debug.Log(e);
-    }
-
-    private void Event_OnResShuffleCard(object sender, ResShuffleCard e)
-    {
-        Debug.Log("Event_OnResShuffleCard");
         Debug.Log(e);
     }
 
@@ -108,12 +105,6 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
     }
 
-    private void Event_OnResGameStart(object sender, ResGameStart e)
-    {
-        Debug.Log("Event_OnResGameStart");
-        Debug.Log(e);
-    }
-
 
 
     private void Event_OnResDealCard(object sender, ResDealCard e)
@@ -132,6 +123,7 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResBet");
         Debug.Log(e);
+        _seatGroup.Bet(e);
     }
 
     private void OnEnable()
@@ -189,9 +181,14 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResDealStreet3Card");
         Debug.Log(e);
-        _seatGroup.DealStreet3Card(3, e);
-        _choiceGroup.gameObject.SetActive(true);
-        
+
+        UnityAction action = (() =>
+        {
+            _choiceGroup.gameObject.SetActive(true);
+        });
+
+        StartCoroutine(_seatGroup.DealStreet3Card(e, action));
+        _choiceGroup.SetCards(e);
     }
 
     private void Event_OnResSelectOpenCard(object sender, ResSelectOpenCard e)
@@ -200,5 +197,19 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
 
         _seatGroup.SelectOpenCard(e);
+    }
+
+    private void Event_OnResGameStart(object sender, ResGameStart e)
+    {
+        Debug.Log("Event_OnResGameStart");
+        Debug.Log(e);
+        _shuffleGroup.gameObject.SetActive(false);
+    }
+
+    private void Event_OnResShuffleCard(object sender, ResShuffleCard e)
+    {
+        Debug.Log("Event_OnResShuffleCard");
+        Debug.Log(e);
+        _shuffleGroup.gameObject.SetActive(true);
     }
 }
