@@ -1,4 +1,6 @@
+using Best.WebSockets;
 using System;
+using System.Collections;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -15,6 +17,20 @@ public class GameManager : Singleton<GameManager>
 
     public void Connect(string tableId)
     {
-        Network.Connect($"ws://localhost:8087/table/join/{tableId}");
+        Network.Connect($"ws://localhost:8087/table/join/{tableId}", OnOpen);
+    }
+
+    private void OnOpen(WebSocket webSocket)
+    {
+        StartCoroutine(CoNetworkUpdate());
+    }
+
+    IEnumerator CoNetworkUpdate()
+    {
+        while (true)
+        {
+            Network.Update();
+            yield return null;
+        }
     }
 }

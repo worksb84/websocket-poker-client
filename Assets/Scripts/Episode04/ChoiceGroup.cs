@@ -22,11 +22,6 @@ public class ChoiceGroup : MonoBehaviour
 
     private void Start()
     {
-        _playCards.Clear();
-        _playCards.Add(_playCard1);
-        _playCards.Add(_playCard2);
-        _playCards.Add(_playCard3);
-
         _timer.gameObject.SetActive(false);
     }
     private void OnEnable()
@@ -41,6 +36,7 @@ public class ChoiceGroup : MonoBehaviour
 
     private void Event_OnResTimer(object sender, ResTimer e)
     {
+        Debug.Log("Event_OnResTimer");
         if (e.Time == 5)
         {
             StartTimer(e.Time);
@@ -66,15 +62,21 @@ public class ChoiceGroup : MonoBehaviour
 
     internal void SetCards(ResDealStreet3Card e)
     {
+        _playCards.Clear();
+        _playCards.Add(_playCard1);
+        _playCards.Add(_playCard2);
+        _playCards.Add(_playCard3);
+
         for (int i = 0; i < e.Cards.Count; i++)
         {
-            _playCards[i].SetCard(e.Cards[i]);
+            var playCard = _playCards[i];
+            playCard.SetCard(e.Cards[i]);
             UnityAction action = () =>
             {
                 gameObject.SetActive(false);
                 StopTimer();
             };
-            _playCards[i].SetAction(action);
+            playCard.SetAction(action);
         }
     }
 }

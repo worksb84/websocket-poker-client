@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using Best.WebSockets;
+using Best.WebSockets.Implementations;
 using Google.Protobuf;
 
 public class NetworkManager
@@ -31,7 +33,7 @@ public class NetworkManager
         _funcMap.Add(Pbm.ID.ResTimer, (Utils.Unmarshal<Pbm.ResTimer>,  GameManager.Event.OnResTimerEvent));
     }
 
-    public void Connect(string address)
+    public void Connect(string address, OnWebSocketOpenDelegate OnOpen)
     {
         if (_webSocket == null)
         {
@@ -47,6 +49,8 @@ public class NetworkManager
     {
         var messages = message.Split('\n');
 
+        UnityEngine.Debug.Log(message);
+
         foreach (var m in messages)
         {
             var msg = Utils.Unmarshal<Pbm.Message>(m);
@@ -54,10 +58,10 @@ public class NetworkManager
         }
     }
 
-    private void OnOpen(WebSocket webSocket)
-    {
-        Update();
-    }
+    //private void OnOpen(WebSocket webSocket)
+    //{
+    //    Update();
+    //}
 
     private void OnClosed(WebSocket webSocket, WebSocketStatusCodes code, string message)
     {
@@ -78,11 +82,12 @@ public class NetworkManager
     }
 
 
-    private void Update()
+    public void Update()
     {
         var buffers = BufferQueue.Instance.Pop();
         foreach (var buffer in buffers)
         {
+            UnityEngine.Debug.Log(buffers);
             if(_funcMap.TryGetValue((Pbm.ID)buffer.Id, out (Func<string, IMessage>, Action<IMessage>) _value))
             {
                 var (unmarshal, action) = _value;

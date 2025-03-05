@@ -82,7 +82,15 @@ message ResTables {
 }
 
 message ResGenerateTable {
-    TableInformation tableInformations              = 1;
+    TableInformation tableInformation               = 1;
+}
+
+message ReqJoinTable {
+    TableInformation tableInformation               = 1;
+}
+
+message ResJoinTable {
+    TableInformation tableInformation               = 1;
 }
 
 message Card {

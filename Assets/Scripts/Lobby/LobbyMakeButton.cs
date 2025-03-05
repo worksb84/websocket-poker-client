@@ -24,7 +24,7 @@ public class LobbyMakeButton : LobbyRoom
 
     private void ResGenerateTable(Pbm.ResGenerateTable res)
     {
-        var tableId = res.TableInformations.TableId;
+        var tableId = res.TableInformation.TableId;
         GameManager.Instance.Connect(tableId);
         SceneManager.LoadScene("Episode04");
     }
