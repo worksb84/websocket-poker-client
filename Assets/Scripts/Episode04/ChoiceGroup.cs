@@ -48,16 +48,7 @@ public class ChoiceGroup : MonoBehaviour
         }
     }
 
-    public void Event_OnResDealStreet3Card(ResDealStreet3Card e)
-    {
-        for (int i = 0; i < _playCards.Count; i++)
-        {
-            _playCards[i].SetCard(e.Cards[i]);
-            _playCards[i].SetPosition(i * 240f);
-            _playCards[i].SetAction(e.Cards[i].S, this);
-            _playCards[i].SetFlip(true);
-        }
-    }
+
 
     internal void Disable()
     {

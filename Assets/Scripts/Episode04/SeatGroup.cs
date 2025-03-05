@@ -2,6 +2,7 @@ using Pbm;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class SeatGroup : MonoBehaviour
@@ -28,16 +29,14 @@ public class SeatGroup : MonoBehaviour
         _seats.Add(_seat1);
         _seats.Add(_seat2);
         _seats.Add(_seat3);
-
-        Deal(7);
     }
 
-    internal void Deal(int v)
+    internal void DealStreet3Card(int v, ResDealStreet3Card e)
     {
-        StartCoroutine(DealCard(v));
+        StartCoroutine(DealCardAnimation(v, e));
     }
 
-    IEnumerator DealCard(int v)
+    IEnumerator DealCardAnimation(int v, ResDealStreet3Card e)
     {
         yield return new WaitForSeconds(0.2f);
         for (int i = 0; i < v; i++)
@@ -58,5 +57,16 @@ public class SeatGroup : MonoBehaviour
             }
         }
 
+        var selfSeat = _seats.Find(x => x.IsSelf == true);
+        selfSeat.SetCard(e);
+    }
+
+    internal void SelectOpenCard(ResSelectOpenCard e)
+    {
+        foreach (var selectOpenCard in e.SelectOpenCards)
+        {
+            var seat = _seats.Find(x => x.Seat_.Seat_ == selectOpenCard.Seat.Seat_);
+            seat.SelectOpenCard(selectOpenCard);
+        }
     }
 }

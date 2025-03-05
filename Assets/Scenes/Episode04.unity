@@ -5126,7 +5126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404089867410625272, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 480
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 404089867410625272, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6700,9 +6700,9 @@ RectTransform:
   - {fileID: 656341169}
   - {fileID: 1137840861}
   - {fileID: 1023177661}
+  - {fileID: 954706844}
   - {fileID: 1351290479}
   - {fileID: 1183366964}
-  - {fileID: 954706844}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -7918,6 +7918,7 @@ MonoBehaviour:
   _resultGroup: {fileID: 742895931}
   _slider: {fileID: 962983479}
   _timerText: {fileID: 349255117}
+  _dealCardGroup: {fileID: 954706843}
 --- !u!1 &696142630
 GameObject:
   m_ObjectHideFlags: 0
@@ -9506,6 +9507,7 @@ MonoBehaviour:
   _resultGroup: {fileID: 1971799959}
   _slider: {fileID: 533319014}
   _timerText: {fileID: 2023721556}
+  _dealCardGroup: {fileID: 954706843}
 --- !u!114 &864561970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10535,7 +10537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 954706844}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: DealCardGroup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10555,10 +10557,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 599825372}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 869}
-  m_SizeDelta: {x: 220, y: 330}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &960606930
 PrefabInstance:
@@ -10831,6 +10833,7 @@ MonoBehaviour:
   _resultGroup: {fileID: 1518499203}
   _slider: {fileID: 904199500}
   _timerText: {fileID: 711498966}
+  _dealCardGroup: {fileID: 954706843}
 --- !u!114 &980087373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12535,6 +12538,7 @@ MonoBehaviour:
   _resultGroup: {fileID: 1641463059}
   _slider: {fileID: 899892358}
   _timerText: {fileID: 1370341384}
+  _dealCardGroup: {fileID: 954706843}
 --- !u!114 &1143890451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15199,7 +15203,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1351290479
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16218,6 +16222,7 @@ MonoBehaviour:
   _resultGroup: {fileID: 1462694976}
   _slider: {fileID: 1618611262}
   _timerText: {fileID: 1862459285}
+  _dealCardGroup: {fileID: 954706843}
 --- !u!1 &1415517046
 GameObject:
   m_ObjectHideFlags: 0
@@ -16806,7 +16811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 404089867410625272, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 240
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 404089867410625272, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -16834,7 +16839,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925560629338149004, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24317,7 +24322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3925560629338149004, guid: 36f2481f3c8595f4a9bd796b63b4a754, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

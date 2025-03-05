@@ -14,6 +14,8 @@ public abstract class Card : MonoBehaviour
     [SerializeField] private GameObject _back;
     [SerializeField] private bool _conceal = true;
 
+    private Pbm.Card _card;
+
     public Image Image { get { return _image; } set { _image = value; } }
     public TMP_Text Name { get { return _name; } set { _name = value; } }
     public TMP_Text Exchange { get { return _exchange; } set { _exchange = value; } }
@@ -23,6 +25,7 @@ public abstract class Card : MonoBehaviour
     public TMP_Text ChangeRate { get { return _changeRate; } set { _changeRate = value; } }
     public GameObject Back { get { return _back; } set { _back = value; } }
     public bool Conceal { get { return _conceal; } set { _conceal = value; } }
+    public Pbm.Card Card_ { get { return _card; } set { _card = value; } }
 
     public abstract void SetCard(Pbm.Card card);
 

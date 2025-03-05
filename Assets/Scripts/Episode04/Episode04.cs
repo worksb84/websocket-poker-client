@@ -45,6 +45,7 @@ public class Episode04 : MonoBehaviour
         _choiceGroup.gameObject.SetActive(false);
 
         _shuffleGroup.StartShuffle();
+        //_seatGroup.Deal(3);
     }
 
     private void Event_OnResTimer(object sender, ResTimer e)
@@ -188,13 +189,16 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResDealStreet3Card");
         Debug.Log(e);
+        _seatGroup.DealStreet3Card(3, e);
         _choiceGroup.gameObject.SetActive(true);
-        _choiceGroup.Event_OnResDealStreet3Card(e);
+        
     }
 
     private void Event_OnResSelectOpenCard(object sender, ResSelectOpenCard e)
     {
         Debug.Log("Event_OnResSelectOpenCard");
         Debug.Log(e);
+
+        _seatGroup.SelectOpenCard(e);
     }
 }

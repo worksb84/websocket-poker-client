@@ -1,14 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using NUnit.Framework;
 using Pbm;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
-using static UnityEngine.Rendering.DebugUI.Table;
-using Unity.VisualScripting;
 
 public class Seat : MonoBehaviour
 {
@@ -27,7 +24,10 @@ public class Seat : MonoBehaviour
     [SerializeField] private GameObject _resultGroup;
     [SerializeField] private Slider _slider;
     [SerializeField] private TMP_Text _timerText;
+    [SerializeField] private GameObject _dealCardGroup;
 
+    public bool IsSelf { get { return _isSelf; } set { _isSelf = value; } }
+    public Pbm.Seat Seat_ { get { return _seat; } set { _seat = value; } }
     public Image ProfileImage { get { return _profileImage; } set { _profileImage = value; } }
     public TMP_Text NameText { get { return _nameText; } set { _nameText = value; } }
     public TMP_Text RateText { get { return _rateText; } set { _rateText = value; } }
@@ -41,6 +41,7 @@ public class Seat : MonoBehaviour
     public GameObject ResultGroup { get { return _resultGroup; } set { _resultGroup = value; } }
     public Slider Slider { get { return _slider; } set { _slider = value; } }
     public TMP_Text TimerText { get { return _timerText; } set { _timerText = value; } }
+    public GameObject DealCardGroup { get { return _dealCardGroup; } set { _dealCardGroup = value; } }
 
     private int _dealCardCount = 0;
     private List<GameObject> _dealCards = new();
@@ -67,7 +68,7 @@ public class Seat : MonoBehaviour
         var cY = bound.center.y;
 
         var card = GameManager.Resource.Instantiate("Prefabs/PlayCard");
-        card.transform.SetParent(gameObject.transform.root.root.root, false);
+        card.transform.SetParent(_dealCardGroup.transform, false);
         _dealCards.Add(card);
 
         var gap = _isSelf ? 75f : 46.67f;
@@ -159,6 +160,22 @@ public class Seat : MonoBehaviour
         {
             var cardRectTransform = card.GetComponent<RectTransform>();
             cardRectTransform.DORotate(Vector3.zero, 0.2f);
+        }
+    }
+
+    internal void SelectOpenCard(SelectOpenCard selectOpenCard)
+    {
+        var idx = _dealCards.FindIndex(x => { return x.GetComponent<PlayCard>().Card_.S == selectOpenCard.Symbol; });
+        (_dealCards[2], _dealCards[idx]) = (_dealCards[idx], _dealCards[2]);
+        _dealCards[2].GetComponent<PlayCard>().SetFlip(true);
+    }
+
+    internal void SetCard(ResDealStreet3Card e)
+    {
+        for (int i = 0; i < e.Cards.Count; i++)
+        {
+            var dealCard = _dealCards[i].GetComponent<PlayCard>();
+            dealCard.SetCard(e.Cards[i]);
         }
     }
 }

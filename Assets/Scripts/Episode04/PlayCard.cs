@@ -5,11 +5,12 @@ public class PlayCard : Card
 {
     public override void SetFlip(bool flip)
     {
-        Back.SetActive(!flip);
+        Back.SetActive(flip);
     }
 
     public override void SetCard(Pbm.Card card)
     {
+        Card_ = card;
         Name.text = card.N;
         Exchange.text = card.E;
         Symbol.text = card.S;
