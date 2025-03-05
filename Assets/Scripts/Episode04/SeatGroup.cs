@@ -34,7 +34,7 @@ public class SeatGroup : MonoBehaviour
     }
 
 
-    internal IEnumerator DealStreet3Card(ResDealStreet3Card e, UnityAction action)
+    internal IEnumerator SetStreet3Card(ResDealStreet3Card e, UnityAction action)
     {
         yield return new WaitForSeconds(_waitForSeconds);
         for (int i = 0; i < e.Cards.Count; i++)
@@ -66,7 +66,7 @@ public class SeatGroup : MonoBehaviour
         action();
     }
 
-    internal void SelectOpenCard(ResSelectOpenCard e)
+    internal void SetOpenCard(ResSelectOpenCard e)
     {
         foreach (var selectOpenCard in e.SelectOpenCards)
         {

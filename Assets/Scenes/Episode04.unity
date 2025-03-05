@@ -5636,8 +5636,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -7906,18 +7906,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSelf: 0
   _profileImage: {fileID: 63556457}
+  _betImage: {fileID: 345099735}
   _nameText: {fileID: 1828564777}
   _rateText: {fileID: 1240841493}
   _previousBetAmount: {fileID: 1557822266}
-  _betImage: {fileID: 345099735}
   _resultText: {fileID: 1453502199}
   _resultAmount: {fileID: 80079743}
   _waitPlayerText: {fileID: 173687822}
+  _timerText: {fileID: 349255117}
   _cardGroup: {fileID: 256818332}
   _timerGroup: {fileID: 1628192398}
   _resultGroup: {fileID: 742895931}
   _slider: {fileID: 962983479}
-  _timerText: {fileID: 349255117}
   _dealCardGroup: {fileID: 954706843}
 --- !u!1 &696142630
 GameObject:
@@ -9495,18 +9495,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSelf: 0
   _profileImage: {fileID: 36954315}
+  _betImage: {fileID: 1566024004}
   _nameText: {fileID: 1576009727}
   _rateText: {fileID: 1860045618}
   _previousBetAmount: {fileID: 1081191668}
-  _betImage: {fileID: 1566024004}
   _resultText: {fileID: 953973316}
   _resultAmount: {fileID: 1306072925}
   _waitPlayerText: {fileID: 2063540252}
+  _timerText: {fileID: 2023721556}
   _cardGroup: {fileID: 2140767101}
   _timerGroup: {fileID: 1806860840}
   _resultGroup: {fileID: 1971799959}
   _slider: {fileID: 533319014}
-  _timerText: {fileID: 2023721556}
   _dealCardGroup: {fileID: 954706843}
 --- !u!114 &864561970
 MonoBehaviour:
@@ -10821,18 +10821,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSelf: 0
   _profileImage: {fileID: 1529546392}
+  _betImage: {fileID: 1927238107}
   _nameText: {fileID: 23910093}
   _rateText: {fileID: 25393803}
   _previousBetAmount: {fileID: 1390174984}
-  _betImage: {fileID: 1927238107}
   _resultText: {fileID: 1811414954}
   _resultAmount: {fileID: 1837916487}
   _waitPlayerText: {fileID: 481986301}
+  _timerText: {fileID: 711498966}
   _cardGroup: {fileID: 305286065}
   _timerGroup: {fileID: 1701899120}
   _resultGroup: {fileID: 1518499203}
   _slider: {fileID: 904199500}
-  _timerText: {fileID: 711498966}
   _dealCardGroup: {fileID: 954706843}
 --- !u!114 &980087373
 MonoBehaviour:
@@ -12471,6 +12471,7 @@ MonoBehaviour:
   _seat3: {fileID: 684112624}
   _seat4: {fileID: 864561969}
   _seat5: {fileID: 980087372}
+  _waitForSeconds: 0.2
 --- !u!1 &1143890448
 GameObject:
   m_ObjectHideFlags: 0
@@ -12526,18 +12527,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSelf: 0
   _profileImage: {fileID: 1116838926}
+  _betImage: {fileID: 627438811}
   _nameText: {fileID: 86404130}
   _rateText: {fileID: 1206015398}
   _previousBetAmount: {fileID: 1549317063}
-  _betImage: {fileID: 627438811}
   _resultText: {fileID: 2013921102}
   _resultAmount: {fileID: 1674115860}
   _waitPlayerText: {fileID: 617362603}
+  _timerText: {fileID: 1370341384}
   _cardGroup: {fileID: 7888863}
   _timerGroup: {fileID: 562547541}
   _resultGroup: {fileID: 1641463059}
   _slider: {fileID: 899892358}
-  _timerText: {fileID: 1370341384}
   _dealCardGroup: {fileID: 954706843}
 --- !u!114 &1143890451
 MonoBehaviour:
@@ -16210,18 +16211,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isSelf: 1
   _profileImage: {fileID: 1920019059}
+  _betImage: {fileID: 1772067154}
   _nameText: {fileID: 763247261}
   _rateText: {fileID: 230239350}
   _previousBetAmount: {fileID: 137806487}
-  _betImage: {fileID: 1772067154}
   _resultText: {fileID: 337032506}
   _resultAmount: {fileID: 1267488213}
   _waitPlayerText: {fileID: 1231909194}
+  _timerText: {fileID: 1862459285}
   _cardGroup: {fileID: 1611898281}
   _timerGroup: {fileID: 602283859}
   _resultGroup: {fileID: 1462694976}
   _slider: {fileID: 1618611262}
-  _timerText: {fileID: 1862459285}
   _dealCardGroup: {fileID: 954706843}
 --- !u!1 &1415517046
 GameObject:

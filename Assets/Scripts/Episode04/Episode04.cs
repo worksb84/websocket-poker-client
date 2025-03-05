@@ -187,7 +187,7 @@ public class Episode04 : MonoBehaviour
             _choiceGroup.gameObject.SetActive(true);
         });
 
-        StartCoroutine(_seatGroup.DealStreet3Card(e, action));
+        StartCoroutine(_seatGroup.SetStreet3Card(e, action));
         _choiceGroup.SetCards(e);
     }
 
@@ -196,7 +196,7 @@ public class Episode04 : MonoBehaviour
         Debug.Log("Event_OnResSelectOpenCard");
         Debug.Log(e);
 
-        _seatGroup.SelectOpenCard(e);
+        _seatGroup.SetOpenCard(e);
     }
 
     private void Event_OnResGameStart(object sender, ResGameStart e)
