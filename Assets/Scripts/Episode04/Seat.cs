@@ -71,7 +71,7 @@ public class Seat : MonoBehaviour
 
     private void Initialize()
     {
-        _seat = new Pbm.Seat() { Seat_ = -1, Uid = -1, Rate = 0 };
+        _seat = new Pbm.Seat() { Seat_ = -1, Uid = 0, Rate = 0 };
         _dealCards.Clear();
         _dealCardCount = 0;
         _profileImage.sprite = null;

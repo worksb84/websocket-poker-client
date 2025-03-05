@@ -21,6 +21,7 @@ public class NetworkManager
         _funcMap.Add(Pbm.ID.ResEnableBet, (Utils.Unmarshal<Pbm.ResEnableBet>, GameManager.Event.OnResEnableBetEvent));
         _funcMap.Add(Pbm.ID.ResGameStart, (Utils.Unmarshal<Pbm.ResGameStart>, GameManager.Event.OnResGameStartEvent));
         _funcMap.Add(Pbm.ID.ResJoinPlayer, (Utils.Unmarshal<Pbm.ResJoinPlayer>, GameManager.Event.OnResJoinPlayerEvent));
+        _funcMap.Add(Pbm.ID.ResRegistPlayer, (Utils.Unmarshal<Pbm.ResRegistPlayer>, GameManager.Event.OnResRegistPlayerEvent));
         _funcMap.Add(Pbm.ID.ResLeave, (Utils.Unmarshal<Pbm.ResLeave>, GameManager.Event.OnResLeaveEvent));
         _funcMap.Add(Pbm.ID.ResMoveRoom, (Utils.Unmarshal<Pbm.ResMoveRoom>, GameManager.Event.OnResMoveRoomEvent));
         _funcMap.Add(Pbm.ID.ResOtherPlayers, (Utils.Unmarshal<Pbm.ResOtherPlayers>, GameManager.Event.OnResOtherPlayersEvent));
@@ -48,9 +49,6 @@ public class NetworkManager
     private void OnMessage(WebSocket webSocket, string message)
     {
         var messages = message.Split('\n');
-
-        UnityEngine.Debug.Log(message);
-
         foreach (var m in messages)
         {
             var msg = Utils.Unmarshal<Pbm.Message>(m);
@@ -87,7 +85,6 @@ public class NetworkManager
         var buffers = BufferQueue.Instance.Pop();
         foreach (var buffer in buffers)
         {
-            UnityEngine.Debug.Log(buffers);
             if(_funcMap.TryGetValue((Pbm.ID)buffer.Id, out (Func<string, IMessage>, Action<IMessage>) _value))
             {
                 var (unmarshal, action) = _value;

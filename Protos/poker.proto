@@ -29,6 +29,7 @@ enum ID {
     Res_OtherPlayers                                = 4020;
     Res_JoinPlayer                                  = 4021;
     Res_Timer                                       = 4022;
+    Res_RegistPlayer                                = 4023;
 
     Res_Countdown                                   = 9999;
 }
@@ -128,18 +129,18 @@ message HoldCard {
 
 
 message Player {
-    string name                                     = 1;
-    repeated PlayerAction playerActions             = 2;
-    repeated HoldCard holdCards                     = 3;
-    bool isFold                                     = 4;
-    bool isAllin                                    = 5;
-    bool isBoss                                     = 6;
-    bool out                                        = 7;
-    double score                                    = 8;
-    uint32 chips                                    = 9;
-    uint32 betChips                                 = 10;
-    BullBearBet bullBearBet                         = 11;
-    SeatStatus seatStatus                           = 12;
+    Seat seat                                       = 1;
+    string name                                     = 2;
+    repeated PlayerAction playerActions             = 3;
+    repeated HoldCard holdCards                     = 4;
+    bool isFold                                     = 5;
+    bool isAllin                                    = 6;
+    bool isBoss                                     = 7;
+    bool out                                        = 8;
+    double score                                    = 9;
+    uint32 chips                                    = 10;
+    uint32 betChips                                 = 11;
+    BullBearBet bullBearBet                         = 12;
 }
 
 message Message {
@@ -273,7 +274,11 @@ message ResOtherPlayers {
 }
 
 message ResJoinPlayer {
-    Player players                                  = 1;
+    Player player                                   = 1;
+}
+
+message ResRegistPlayer {
+    Player player                                   = 1;
 }
 
 message ResTimer {

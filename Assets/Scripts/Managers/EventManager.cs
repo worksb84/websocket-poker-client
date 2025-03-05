@@ -11,6 +11,7 @@ public class EventManager
     public event EventHandler<Pbm.ResEnableBet> OnResEnableBet;
     public event EventHandler<Pbm.ResGameStart> OnResGameStart;
     public event EventHandler<Pbm.ResJoinPlayer> OnResJoinPlayer;
+    public event EventHandler<Pbm.ResRegistPlayer> OnResRegistPlayer;
     public event EventHandler<Pbm.ResLeave> OnResLeave;
     public event EventHandler<Pbm.ResMoveRoom> OnResMoveRoom;
     public event EventHandler<Pbm.ResOtherPlayers> OnResOtherPlayers;
@@ -30,6 +31,7 @@ public class EventManager
     public void OnResEnableBetEvent(IMessage res) => OnResEnableBet?.Invoke(this, (Pbm.ResEnableBet)res);
     public void OnResGameStartEvent(IMessage res) => OnResGameStart?.Invoke(this, (Pbm.ResGameStart)res);
     public void OnResJoinPlayerEvent(IMessage res) => OnResJoinPlayer?.Invoke(this, (Pbm.ResJoinPlayer)res);
+    public void OnResRegistPlayerEvent(IMessage res) => OnResRegistPlayer?.Invoke(this, (Pbm.ResRegistPlayer)res);
     public void OnResLeaveEvent(IMessage res) => OnResLeave?.Invoke(this, (Pbm.ResLeave)res);
     public void OnResMoveRoomEvent(IMessage res) => OnResMoveRoom?.Invoke(this, (Pbm.ResMoveRoom)res);
     public void OnResOtherPlayersEvent(IMessage res) => OnResOtherPlayers?.Invoke(this, (Pbm.ResOtherPlayers)res);

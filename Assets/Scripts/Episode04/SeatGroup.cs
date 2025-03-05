@@ -1,4 +1,5 @@
 using Pbm;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,6 +37,7 @@ public class SeatGroup : MonoBehaviour
 
     internal IEnumerator SetStreet3Card(ResDealStreet3Card e, UnityAction action)
     {
+        Debug.Log("SetStreet3Card");
         yield return new WaitForSeconds(_waitForSeconds);
         for (int i = 0; i < e.Cards.Count; i++)
         {
@@ -85,6 +87,12 @@ public class SeatGroup : MonoBehaviour
     {
         var seat = FindBySeat(e.Seat);
         seat.SetStreetBoss();
+    }
+
+    internal void SetSelf(ResRegistPlayer e)
+    {
+        _seat3.Seat_ = e.Player.Seat;
+        _seat3.IsSelf = true;
     }
 
     private Seat FindBySeat(Pbm.Seat seat)

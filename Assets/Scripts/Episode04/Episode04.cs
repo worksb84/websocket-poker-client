@@ -1,4 +1,5 @@
 using Pbm;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -135,6 +136,7 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResDealStreet3Card += Event_OnResDealStreet3Card;
         GameManager.Event.OnResGameStart += Event_OnResGameStart;
         GameManager.Event.OnResJoinPlayer += Event_OnResJoinPlayer;
+        GameManager.Event.OnResRegistPlayer += Event_OnResRegistPlayer;
         GameManager.Event.OnResLeave += Event_OnResLeave;
         GameManager.Event.OnResMoveRoom += Event_OnResMoveRoom;
         GameManager.Event.OnResOtherPlayers += Event_OnResOtherPlayers;
@@ -156,6 +158,7 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResDealStreet3Card -= Event_OnResDealStreet3Card;
         GameManager.Event.OnResGameStart -= Event_OnResGameStart;
         GameManager.Event.OnResJoinPlayer -= Event_OnResJoinPlayer;
+        GameManager.Event.OnResRegistPlayer -= Event_OnResRegistPlayer;
         GameManager.Event.OnResLeave -= Event_OnResLeave;
         GameManager.Event.OnResMoveRoom -= Event_OnResMoveRoom;
         GameManager.Event.OnResOtherPlayers -= Event_OnResOtherPlayers;
@@ -168,6 +171,13 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResTimer -= Event_OnResTimer;
     }
 
+
+    private void Event_OnResRegistPlayer(object sender, ResRegistPlayer e)
+    {
+        Debug.Log("Event_OnResRegistPlayer");
+        Debug.Log(e);
+        _seatGroup.SetSelf(e);
+    }
 
     private void Event_OnResBullBearReady(object sender, ResBullBearReady e)
     {

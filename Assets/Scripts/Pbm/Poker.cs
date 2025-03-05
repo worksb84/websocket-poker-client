@@ -40,61 +40,62 @@ namespace Pbm {
             "IiUKCVNuYXBzaG90cxIYCglzbmFwc2hvdHMYASADKAsyBS5DYXJkIh0KBUNh",
             "cmRzEhQKBWNhcmRzGAEgAygLMgUuQ2FyZCIwCgxQbGF5ZXJBY3Rpb24SEQoD",
             "YmV0GAEgASgOMgQuQmV0Eg0KBWNoaXBzGAIgASgNIjAKCEhvbGRDYXJkEhMK",
-            "BGNhcmQYASABKAsyBS5DYXJkEg8KB2NvbmNlYWwYAiABKAgijAIKBlBsYXll",
-            "chIMCgRuYW1lGAEgASgJEiQKDXBsYXllckFjdGlvbnMYAiADKAsyDS5QbGF5",
-            "ZXJBY3Rpb24SHAoJaG9sZENhcmRzGAMgAygLMgkuSG9sZENhcmQSDgoGaXNG",
-            "b2xkGAQgASgIEg8KB2lzQWxsaW4YBSABKAgSDgoGaXNCb3NzGAYgASgIEgsK",
-            "A291dBgHIAEoCBINCgVzY29yZRgIIAEoARINCgVjaGlwcxgJIAEoDRIQCghi",
-            "ZXRDaGlwcxgKIAEoDRIhCgtidWxsQmVhckJldBgLIAEoDjIMLkJ1bGxCZWFy",
-            "QmV0Eh8KCnNlYXRTdGF0dXMYDCABKA4yCy5TZWF0U3RhdHVzIiMKB01lc3Nh",
-            "Z2USCgoCaWQYASABKAUSDAoEYm9keRgCIAEoCSJQCgRTZWF0EgsKA3VpZBgB",
-            "IAEoBRIMCgRzZWF0GAIgASgFEgwKBHJhdGUYAyABKAESHwoKc2VhdFN0YXR1",
-            "cxgEIAEoDjILLlNlYXRTdGF0dXMiEgoQUmVxRW50ZXJHYW1lUm9vbSISChBS",
-            "ZXNFbnRlckdhbWVSb29tIh8KCFJlc1JlYWR5EhMKBHNlYXQYASABKAsyBS5T",
-            "ZWF0Ig4KDFJlc0dhbWVTdGFydCIQCg5SZXNTaHVmZmxlQ2FyZCIqChJSZXNE",
-            "ZWFsU3RyZWV0M0NhcmQSFAoFY2FyZHMYASADKAsyBS5DYXJkIjUKDlNlbGVj",
-            "dE9wZW5DYXJkEhMKBHNlYXQYASABKAsyBS5TZWF0Eg4KBnN5bWJvbBgCIAEo",
-            "CSI8ChFSZXFTZWxlY3RPcGVuQ2FyZBInCg5zZWxlY3RPcGVuQ2FyZBgBIAEo",
-            "CzIPLlNlbGVjdE9wZW5DYXJkIj0KEVJlc1NlbGVjdE9wZW5DYXJkEigKD3Nl",
-            "bGVjdE9wZW5DYXJkcxgBIAMoCzIPLlNlbGVjdE9wZW5DYXJkIiQKDVJlc1N0",
-            "cmVldEJvc3MSEwoEc2VhdBgBIAEoCzIFLlNlYXQiEAoOUmVzU3RhcnRTdHJl",
-            "ZXQiPwoGUmVxQmV0EhMKBHNlYXQYASABKAsyBS5TZWF0EhEKA2JldBgCIAEo",
-            "DjIELkJldBINCgVjaGlwcxgDIAEoByI/CgZSZXNCZXQSEwoEc2VhdBgBIAEo",
-            "CzIFLlNlYXQSEQoDYmV0GAIgASgOMgQuQmV0Eg0KBWNoaXBzGAMgASgHIiMK",
-            "C1Jlc0RlYWxDYXJkEhQKBWNhcmRzGAEgASgLMgUuQ2FyZCISChBSZXNCdWxs",
-            "QmVhclJlYWR5IkUKC1JlcUJ1bGxCZWFyEhMKBHNlYXQYASABKAsyBS5TZWF0",
-            "EiEKC2J1bGxCZWFyQmV0GAIgASgOMgwuQnVsbEJlYXJCZXQiIgoLUmVzQnVs",
-            "bEJlYXISEwoEc2VhdBgBIAEoCzIFLlNlYXQiMAoJUmVzUmVzdWx0EhMKBHNl",
-            "YXQYASABKAsyBS5TZWF0Eg4KBmFtb3VudBgDIAEoASIfCghSZXFMZWF2ZRIT",
-            "CgRzZWF0GAEgASgLMgUuU2VhdCIfCghSZXNMZWF2ZRITCgRzZWF0GAEgASgL",
-            "MgUuU2VhdCIiCgtSZXFNb3ZlUm9vbRITCgRzZWF0GAEgASgLMgUuU2VhdCIi",
-            "CgtSZXNNb3ZlUm9vbRITCgRzZWF0GAEgASgLMgUuU2VhdCI9CglFbmFibGVC",
-            "ZXQSEQoDYmV0GAEgASgOMgQuQmV0Eg0KBWNoaXBzGAIgASgNEg4KBmVuYWJs",
-            "ZRgDIAEoCCItCgxSZXNFbmFibGVCZXQSHQoJZW5hYmxlQmV0GAEgAygLMgou",
-            "RW5hYmxlQmV0InUKC1RhYmxlQ29uZmlnEg8KB3RhYmxlSWQYASABKAkSEwoE",
-            "Z2FtZRgCIAEoDjIFLkdhbWUSDgoGcmVnaW9uGAMgASgJEg8KB21heFNlYXQY",
-            "BCABKAUSEQoJY2FyZExpbWl0GAUgASgFEgwKBGFudGUYBiABKA0iKwoPUmVz",
-            "T3RoZXJQbGF5ZXJzEhgKB3BsYXllcnMYASADKAsyBy5QbGF5ZXIiKQoNUmVz",
-            "Sm9pblBsYXllchIYCgdwbGF5ZXJzGAEgASgLMgcuUGxheWVyIi0KCFJlc1Rp",
-            "bWVyEhMKBHNlYXQYASABKAsyBS5TZWF0EgwKBHRpbWUYAiABKAUq9AMKAklE",
-            "EggKBE5vbmUQABILCgdUZXN0aW5nEAESDgoJUmVzX1JlYWR5EKAfEhIKDVJl",
-            "c19HYW1lU3RhcnQQoR8SFAoPUmVzX1NodWZmbGVDYXJkEKIfEhgKE1Jlc19E",
-            "ZWFsU3RyZWV0M0NhcmQQox8SFwoSUmVxX1NlbGVjdE9wZW5DYXJkEKQfEhcK",
-            "ElJlc19TZWxlY3RPcGVuQ2FyZBClHxITCg5SZXNfU3RyZWV0Qm9zcxCmHxIU",
-            "Cg9SZXNfU3RhcnRTdHJlZXQQpx8SDAoHUmVxX0JldBCoHxIMCgdSZXNfQmV0",
-            "EKkfEhEKDFJlc19EZWFsQ2FyZBCqHxIWChFSZXNfQnVsbEJlYXJSZWFkeRCr",
-            "HxIRCgxSZXFfQnVsbEJlYXIQrB8SEQoMUmVzX0J1bGxCZWFyEK0fEg8KClJl",
-            "c19SZXN1bHQQrh8SDgoJUmVxX0xlYXZlEK8fEg4KCVJlc19MZWF2ZRCwHxIR",
-            "CgxSZXFfTW92ZVJvb20QsR8SEQoMUmVzX01vdmVSb29tELIfEhIKDVJlc19F",
-            "bmFibGVCZXQQsx8SFQoQUmVzX090aGVyUGxheWVycxC0HxITCg5SZXNfSm9p",
-            "blBsYXllchC1HxIOCglSZXNfVGltZXIQth8SEgoNUmVzX0NvdW50ZG93bhCP",
-            "Tio9CgRHYW1lEgkKBXNldmVuEAASDAoIYnVsbEJlYXIQARIMCghza2VsZXRv",
-            "bhACEg4KCm1pZHVzVG91Y2gQAypZCgNCZXQSCQoFYnV5aW4QABIJCgVjaGVj",
-            "axABEgkKBWJiaW5nEAISCAoEaGFsZhADEggKBGZ1bGwQBBIJCgVhbGxpbhAF",
-            "EggKBGZvbGQQBhIICgRjYWxsEAcqPgoLQnVsbEJlYXJCZXQSEAoMYnVsbEJl",
-            "YXJOb25lEAASCAoEYnVsbBABEgkKBXN3aW5nEAISCAoEYmVhchADKiwKClNl",
-            "YXRTdGF0dXMSCQoFcmVhZHkQABIICgRwbGF5EAESCQoFbGVhdmUQAkIPWgdw",
-            "a2cvcGJtqgIDUGJtYgZwcm90bzM="));
+            "BGNhcmQYASABKAsyBS5DYXJkEg8KB2NvbmNlYWwYAiABKAgigAIKBlBsYXll",
+            "chITCgRzZWF0GAEgASgLMgUuU2VhdBIMCgRuYW1lGAIgASgJEiQKDXBsYXll",
+            "ckFjdGlvbnMYAyADKAsyDS5QbGF5ZXJBY3Rpb24SHAoJaG9sZENhcmRzGAQg",
+            "AygLMgkuSG9sZENhcmQSDgoGaXNGb2xkGAUgASgIEg8KB2lzQWxsaW4YBiAB",
+            "KAgSDgoGaXNCb3NzGAcgASgIEgsKA291dBgIIAEoCBINCgVzY29yZRgJIAEo",
+            "ARINCgVjaGlwcxgKIAEoDRIQCghiZXRDaGlwcxgLIAEoDRIhCgtidWxsQmVh",
+            "ckJldBgMIAEoDjIMLkJ1bGxCZWFyQmV0IiMKB01lc3NhZ2USCgoCaWQYASAB",
+            "KAUSDAoEYm9keRgCIAEoCSJQCgRTZWF0EgsKA3VpZBgBIAEoBRIMCgRzZWF0",
+            "GAIgASgFEgwKBHJhdGUYAyABKAESHwoKc2VhdFN0YXR1cxgEIAEoDjILLlNl",
+            "YXRTdGF0dXMiEgoQUmVxRW50ZXJHYW1lUm9vbSISChBSZXNFbnRlckdhbWVS",
+            "b29tIh8KCFJlc1JlYWR5EhMKBHNlYXQYASABKAsyBS5TZWF0Ig4KDFJlc0dh",
+            "bWVTdGFydCIQCg5SZXNTaHVmZmxlQ2FyZCIqChJSZXNEZWFsU3RyZWV0M0Nh",
+            "cmQSFAoFY2FyZHMYASADKAsyBS5DYXJkIjUKDlNlbGVjdE9wZW5DYXJkEhMK",
+            "BHNlYXQYASABKAsyBS5TZWF0Eg4KBnN5bWJvbBgCIAEoCSI8ChFSZXFTZWxl",
+            "Y3RPcGVuQ2FyZBInCg5zZWxlY3RPcGVuQ2FyZBgBIAEoCzIPLlNlbGVjdE9w",
+            "ZW5DYXJkIj0KEVJlc1NlbGVjdE9wZW5DYXJkEigKD3NlbGVjdE9wZW5DYXJk",
+            "cxgBIAMoCzIPLlNlbGVjdE9wZW5DYXJkIiQKDVJlc1N0cmVldEJvc3MSEwoE",
+            "c2VhdBgBIAEoCzIFLlNlYXQiEAoOUmVzU3RhcnRTdHJlZXQiPwoGUmVxQmV0",
+            "EhMKBHNlYXQYASABKAsyBS5TZWF0EhEKA2JldBgCIAEoDjIELkJldBINCgVj",
+            "aGlwcxgDIAEoByI/CgZSZXNCZXQSEwoEc2VhdBgBIAEoCzIFLlNlYXQSEQoD",
+            "YmV0GAIgASgOMgQuQmV0Eg0KBWNoaXBzGAMgASgHIiMKC1Jlc0RlYWxDYXJk",
+            "EhQKBWNhcmRzGAEgASgLMgUuQ2FyZCISChBSZXNCdWxsQmVhclJlYWR5IkUK",
+            "C1JlcUJ1bGxCZWFyEhMKBHNlYXQYASABKAsyBS5TZWF0EiEKC2J1bGxCZWFy",
+            "QmV0GAIgASgOMgwuQnVsbEJlYXJCZXQiIgoLUmVzQnVsbEJlYXISEwoEc2Vh",
+            "dBgBIAEoCzIFLlNlYXQiMAoJUmVzUmVzdWx0EhMKBHNlYXQYASABKAsyBS5T",
+            "ZWF0Eg4KBmFtb3VudBgDIAEoASIfCghSZXFMZWF2ZRITCgRzZWF0GAEgASgL",
+            "MgUuU2VhdCIfCghSZXNMZWF2ZRITCgRzZWF0GAEgASgLMgUuU2VhdCIiCgtS",
+            "ZXFNb3ZlUm9vbRITCgRzZWF0GAEgASgLMgUuU2VhdCIiCgtSZXNNb3ZlUm9v",
+            "bRITCgRzZWF0GAEgASgLMgUuU2VhdCI9CglFbmFibGVCZXQSEQoDYmV0GAEg",
+            "ASgOMgQuQmV0Eg0KBWNoaXBzGAIgASgNEg4KBmVuYWJsZRgDIAEoCCItCgxS",
+            "ZXNFbmFibGVCZXQSHQoJZW5hYmxlQmV0GAEgAygLMgouRW5hYmxlQmV0InUK",
+            "C1RhYmxlQ29uZmlnEg8KB3RhYmxlSWQYASABKAkSEwoEZ2FtZRgCIAEoDjIF",
+            "LkdhbWUSDgoGcmVnaW9uGAMgASgJEg8KB21heFNlYXQYBCABKAUSEQoJY2Fy",
+            "ZExpbWl0GAUgASgFEgwKBGFudGUYBiABKA0iKwoPUmVzT3RoZXJQbGF5ZXJz",
+            "EhgKB3BsYXllcnMYASADKAsyBy5QbGF5ZXIiKAoNUmVzSm9pblBsYXllchIX",
+            "CgZwbGF5ZXIYASABKAsyBy5QbGF5ZXIiKgoPUmVzUmVnaXN0UGxheWVyEhcK",
+            "BnBsYXllchgBIAEoCzIHLlBsYXllciItCghSZXNUaW1lchITCgRzZWF0GAEg",
+            "ASgLMgUuU2VhdBIMCgR0aW1lGAIgASgFKosECgJJRBIICgROb25lEAASCwoH",
+            "VGVzdGluZxABEg4KCVJlc19SZWFkeRCgHxISCg1SZXNfR2FtZVN0YXJ0EKEf",
+            "EhQKD1Jlc19TaHVmZmxlQ2FyZBCiHxIYChNSZXNfRGVhbFN0cmVldDNDYXJk",
+            "EKMfEhcKElJlcV9TZWxlY3RPcGVuQ2FyZBCkHxIXChJSZXNfU2VsZWN0T3Bl",
+            "bkNhcmQQpR8SEwoOUmVzX1N0cmVldEJvc3MQph8SFAoPUmVzX1N0YXJ0U3Ry",
+            "ZWV0EKcfEgwKB1JlcV9CZXQQqB8SDAoHUmVzX0JldBCpHxIRCgxSZXNfRGVh",
+            "bENhcmQQqh8SFgoRUmVzX0J1bGxCZWFyUmVhZHkQqx8SEQoMUmVxX0J1bGxC",
+            "ZWFyEKwfEhEKDFJlc19CdWxsQmVhchCtHxIPCgpSZXNfUmVzdWx0EK4fEg4K",
+            "CVJlcV9MZWF2ZRCvHxIOCglSZXNfTGVhdmUQsB8SEQoMUmVxX01vdmVSb29t",
+            "ELEfEhEKDFJlc19Nb3ZlUm9vbRCyHxISCg1SZXNfRW5hYmxlQmV0ELMfEhUK",
+            "EFJlc19PdGhlclBsYXllcnMQtB8SEwoOUmVzX0pvaW5QbGF5ZXIQtR8SDgoJ",
+            "UmVzX1RpbWVyELYfEhUKEFJlc19SZWdpc3RQbGF5ZXIQtx8SEgoNUmVzX0Nv",
+            "dW50ZG93bhCPTio9CgRHYW1lEgkKBXNldmVuEAASDAoIYnVsbEJlYXIQARIM",
+            "Cghza2VsZXRvbhACEg4KCm1pZHVzVG91Y2gQAypZCgNCZXQSCQoFYnV5aW4Q",
+            "ABIJCgVjaGVjaxABEgkKBWJiaW5nEAISCAoEaGFsZhADEggKBGZ1bGwQBBIJ",
+            "CgVhbGxpbhAFEggKBGZvbGQQBhIICgRjYWxsEAcqPgoLQnVsbEJlYXJCZXQS",
+            "EAoMYnVsbEJlYXJOb25lEAASCAoEYnVsbBABEgkKBXN3aW5nEAISCAoEYmVh",
+            "chADKiwKClNlYXRTdGF0dXMSCQoFcmVhZHkQABIICgRwbGF5EAESCQoFbGVh",
+            "dmUQAkIPWgdwa2cvcGJtqgIDUGJtYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pbm.ID), typeof(global::Pbm.Game), typeof(global::Pbm.Bet), typeof(global::Pbm.BullBearBet), typeof(global::Pbm.SeatStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -109,7 +110,7 @@ namespace Pbm {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.Cards), global::Pbm.Cards.Parser, new[]{ "Cards_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.PlayerAction), global::Pbm.PlayerAction.Parser, new[]{ "Bet", "Chips" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.HoldCard), global::Pbm.HoldCard.Parser, new[]{ "Card", "Conceal" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.Player), global::Pbm.Player.Parser, new[]{ "Name", "PlayerActions", "HoldCards", "IsFold", "IsAllin", "IsBoss", "Out", "Score", "Chips", "BetChips", "BullBearBet", "SeatStatus" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.Player), global::Pbm.Player.Parser, new[]{ "Seat", "Name", "PlayerActions", "HoldCards", "IsFold", "IsAllin", "IsBoss", "Out", "Score", "Chips", "BetChips", "BullBearBet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.Message), global::Pbm.Message.Parser, new[]{ "Id", "Body" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.Seat), global::Pbm.Seat.Parser, new[]{ "Uid", "Seat_", "Rate", "SeatStatus" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ReqEnterGameRoom), global::Pbm.ReqEnterGameRoom.Parser, null, null, null, null, null),
@@ -138,7 +139,8 @@ namespace Pbm {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResEnableBet), global::Pbm.ResEnableBet.Parser, new[]{ "EnableBet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.TableConfig), global::Pbm.TableConfig.Parser, new[]{ "TableId", "Game", "Region", "MaxSeat", "CardLimit", "Ante" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResOtherPlayers), global::Pbm.ResOtherPlayers.Parser, new[]{ "Players" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResJoinPlayer), global::Pbm.ResJoinPlayer.Parser, new[]{ "Players" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResJoinPlayer), global::Pbm.ResJoinPlayer.Parser, new[]{ "Player" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResRegistPlayer), global::Pbm.ResRegistPlayer.Parser, new[]{ "Player" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResTimer), global::Pbm.ResTimer.Parser, new[]{ "Seat", "Time" }, null, null, null, null)
           }));
     }
@@ -172,6 +174,7 @@ namespace Pbm {
     [pbr::OriginalName("Res_OtherPlayers")] ResOtherPlayers = 4020,
     [pbr::OriginalName("Res_JoinPlayer")] ResJoinPlayer = 4021,
     [pbr::OriginalName("Res_Timer")] ResTimer = 4022,
+    [pbr::OriginalName("Res_RegistPlayer")] ResRegistPlayer = 4023,
     [pbr::OriginalName("Res_Countdown")] ResCountdown = 9999,
   }
 
@@ -3063,6 +3066,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Player(Player other) : this() {
+      seat_ = other.seat_ != null ? other.seat_.Clone() : null;
       name_ = other.name_;
       playerActions_ = other.playerActions_.Clone();
       holdCards_ = other.holdCards_.Clone();
@@ -3074,7 +3078,6 @@ namespace Pbm {
       chips_ = other.chips_;
       betChips_ = other.betChips_;
       bullBearBet_ = other.bullBearBet_;
-      seatStatus_ = other.seatStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3084,8 +3087,20 @@ namespace Pbm {
       return new Player(this);
     }
 
+    /// <summary>Field number for the "seat" field.</summary>
+    public const int SeatFieldNumber = 1;
+    private global::Pbm.Seat seat_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Pbm.Seat Seat {
+      get { return seat_; }
+      set {
+        seat_ = value;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
+    public const int NameFieldNumber = 2;
     private string name_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3097,9 +3112,9 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "playerActions" field.</summary>
-    public const int PlayerActionsFieldNumber = 2;
+    public const int PlayerActionsFieldNumber = 3;
     private static readonly pb::FieldCodec<global::Pbm.PlayerAction> _repeated_playerActions_codec
-        = pb::FieldCodec.ForMessage(18, global::Pbm.PlayerAction.Parser);
+        = pb::FieldCodec.ForMessage(26, global::Pbm.PlayerAction.Parser);
     private readonly pbc::RepeatedField<global::Pbm.PlayerAction> playerActions_ = new pbc::RepeatedField<global::Pbm.PlayerAction>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3108,9 +3123,9 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "holdCards" field.</summary>
-    public const int HoldCardsFieldNumber = 3;
+    public const int HoldCardsFieldNumber = 4;
     private static readonly pb::FieldCodec<global::Pbm.HoldCard> _repeated_holdCards_codec
-        = pb::FieldCodec.ForMessage(26, global::Pbm.HoldCard.Parser);
+        = pb::FieldCodec.ForMessage(34, global::Pbm.HoldCard.Parser);
     private readonly pbc::RepeatedField<global::Pbm.HoldCard> holdCards_ = new pbc::RepeatedField<global::Pbm.HoldCard>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3119,7 +3134,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "isFold" field.</summary>
-    public const int IsFoldFieldNumber = 4;
+    public const int IsFoldFieldNumber = 5;
     private bool isFold_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3131,7 +3146,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "isAllin" field.</summary>
-    public const int IsAllinFieldNumber = 5;
+    public const int IsAllinFieldNumber = 6;
     private bool isAllin_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3143,7 +3158,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "isBoss" field.</summary>
-    public const int IsBossFieldNumber = 6;
+    public const int IsBossFieldNumber = 7;
     private bool isBoss_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3155,7 +3170,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "out" field.</summary>
-    public const int OutFieldNumber = 7;
+    public const int OutFieldNumber = 8;
     private bool out_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3167,7 +3182,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "score" field.</summary>
-    public const int ScoreFieldNumber = 8;
+    public const int ScoreFieldNumber = 9;
     private double score_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3179,7 +3194,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "chips" field.</summary>
-    public const int ChipsFieldNumber = 9;
+    public const int ChipsFieldNumber = 10;
     private uint chips_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3191,7 +3206,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "betChips" field.</summary>
-    public const int BetChipsFieldNumber = 10;
+    public const int BetChipsFieldNumber = 11;
     private uint betChips_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3203,7 +3218,7 @@ namespace Pbm {
     }
 
     /// <summary>Field number for the "bullBearBet" field.</summary>
-    public const int BullBearBetFieldNumber = 11;
+    public const int BullBearBetFieldNumber = 12;
     private global::Pbm.BullBearBet bullBearBet_ = global::Pbm.BullBearBet.BullBearNone;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3211,18 +3226,6 @@ namespace Pbm {
       get { return bullBearBet_; }
       set {
         bullBearBet_ = value;
-      }
-    }
-
-    /// <summary>Field number for the "seatStatus" field.</summary>
-    public const int SeatStatusFieldNumber = 12;
-    private global::Pbm.SeatStatus seatStatus_ = global::Pbm.SeatStatus.Ready;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Pbm.SeatStatus SeatStatus {
-      get { return seatStatus_; }
-      set {
-        seatStatus_ = value;
       }
     }
 
@@ -3241,6 +3244,7 @@ namespace Pbm {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(Seat, other.Seat)) return false;
       if (Name != other.Name) return false;
       if(!playerActions_.Equals(other.playerActions_)) return false;
       if(!holdCards_.Equals(other.holdCards_)) return false;
@@ -3252,7 +3256,6 @@ namespace Pbm {
       if (Chips != other.Chips) return false;
       if (BetChips != other.BetChips) return false;
       if (BullBearBet != other.BullBearBet) return false;
-      if (SeatStatus != other.SeatStatus) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3260,6 +3263,7 @@ namespace Pbm {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (seat_ != null) hash ^= Seat.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= playerActions_.GetHashCode();
       hash ^= holdCards_.GetHashCode();
@@ -3271,7 +3275,6 @@ namespace Pbm {
       if (Chips != 0) hash ^= Chips.GetHashCode();
       if (BetChips != 0) hash ^= BetChips.GetHashCode();
       if (BullBearBet != global::Pbm.BullBearBet.BullBearNone) hash ^= BullBearBet.GetHashCode();
-      if (SeatStatus != global::Pbm.SeatStatus.Ready) hash ^= SeatStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3290,47 +3293,47 @@ namespace Pbm {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
+      if (seat_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(Seat);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       playerActions_.WriteTo(output, _repeated_playerActions_codec);
       holdCards_.WriteTo(output, _repeated_holdCards_codec);
       if (IsFold != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(IsFold);
       }
       if (IsAllin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteBool(IsAllin);
       }
       if (IsBoss != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteBool(IsBoss);
       }
       if (Out != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(Out);
       }
       if (Score != 0D) {
-        output.WriteRawTag(65);
+        output.WriteRawTag(73);
         output.WriteDouble(Score);
       }
       if (Chips != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Chips);
       }
       if (BetChips != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(BetChips);
       }
       if (BullBearBet != global::Pbm.BullBearBet.BullBearNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) BullBearBet);
-      }
-      if (SeatStatus != global::Pbm.SeatStatus.Ready) {
         output.WriteRawTag(96);
-        output.WriteEnum((int) SeatStatus);
+        output.WriteEnum((int) BullBearBet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3342,47 +3345,47 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
+      if (seat_ != null) {
         output.WriteRawTag(10);
+        output.WriteMessage(Seat);
+      }
+      if (Name.Length != 0) {
+        output.WriteRawTag(18);
         output.WriteString(Name);
       }
       playerActions_.WriteTo(ref output, _repeated_playerActions_codec);
       holdCards_.WriteTo(ref output, _repeated_holdCards_codec);
       if (IsFold != false) {
-        output.WriteRawTag(32);
+        output.WriteRawTag(40);
         output.WriteBool(IsFold);
       }
       if (IsAllin != false) {
-        output.WriteRawTag(40);
+        output.WriteRawTag(48);
         output.WriteBool(IsAllin);
       }
       if (IsBoss != false) {
-        output.WriteRawTag(48);
+        output.WriteRawTag(56);
         output.WriteBool(IsBoss);
       }
       if (Out != false) {
-        output.WriteRawTag(56);
+        output.WriteRawTag(64);
         output.WriteBool(Out);
       }
       if (Score != 0D) {
-        output.WriteRawTag(65);
+        output.WriteRawTag(73);
         output.WriteDouble(Score);
       }
       if (Chips != 0) {
-        output.WriteRawTag(72);
+        output.WriteRawTag(80);
         output.WriteUInt32(Chips);
       }
       if (BetChips != 0) {
-        output.WriteRawTag(80);
+        output.WriteRawTag(88);
         output.WriteUInt32(BetChips);
       }
       if (BullBearBet != global::Pbm.BullBearBet.BullBearNone) {
-        output.WriteRawTag(88);
-        output.WriteEnum((int) BullBearBet);
-      }
-      if (SeatStatus != global::Pbm.SeatStatus.Ready) {
         output.WriteRawTag(96);
-        output.WriteEnum((int) SeatStatus);
+        output.WriteEnum((int) BullBearBet);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3394,6 +3397,9 @@ namespace Pbm {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (seat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seat);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -3423,9 +3429,6 @@ namespace Pbm {
       if (BullBearBet != global::Pbm.BullBearBet.BullBearNone) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) BullBearBet);
       }
-      if (SeatStatus != global::Pbm.SeatStatus.Ready) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SeatStatus);
-      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3437,6 +3440,12 @@ namespace Pbm {
     public void MergeFrom(Player other) {
       if (other == null) {
         return;
+      }
+      if (other.seat_ != null) {
+        if (seat_ == null) {
+          Seat = new global::Pbm.Seat();
+        }
+        Seat.MergeFrom(other.Seat);
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
@@ -3467,9 +3476,6 @@ namespace Pbm {
       if (other.BullBearBet != global::Pbm.BullBearBet.BullBearNone) {
         BullBearBet = other.BullBearBet;
       }
-      if (other.SeatStatus != global::Pbm.SeatStatus.Ready) {
-        SeatStatus = other.SeatStatus;
-      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3490,51 +3496,54 @@ namespace Pbm {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            Name = input.ReadString();
+            if (seat_ == null) {
+              Seat = new global::Pbm.Seat();
+            }
+            input.ReadMessage(Seat);
             break;
           }
           case 18: {
-            playerActions_.AddEntriesFrom(input, _repeated_playerActions_codec);
+            Name = input.ReadString();
             break;
           }
           case 26: {
+            playerActions_.AddEntriesFrom(input, _repeated_playerActions_codec);
+            break;
+          }
+          case 34: {
             holdCards_.AddEntriesFrom(input, _repeated_holdCards_codec);
             break;
           }
-          case 32: {
+          case 40: {
             IsFold = input.ReadBool();
             break;
           }
-          case 40: {
+          case 48: {
             IsAllin = input.ReadBool();
             break;
           }
-          case 48: {
+          case 56: {
             IsBoss = input.ReadBool();
             break;
           }
-          case 56: {
+          case 64: {
             Out = input.ReadBool();
             break;
           }
-          case 65: {
+          case 73: {
             Score = input.ReadDouble();
             break;
           }
-          case 72: {
+          case 80: {
             Chips = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 88: {
             BetChips = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BullBearBet = (global::Pbm.BullBearBet) input.ReadEnum();
-            break;
-          }
           case 96: {
-            SeatStatus = (global::Pbm.SeatStatus) input.ReadEnum();
+            BullBearBet = (global::Pbm.BullBearBet) input.ReadEnum();
             break;
           }
         }
@@ -3557,51 +3566,54 @@ namespace Pbm {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            Name = input.ReadString();
+            if (seat_ == null) {
+              Seat = new global::Pbm.Seat();
+            }
+            input.ReadMessage(Seat);
             break;
           }
           case 18: {
-            playerActions_.AddEntriesFrom(ref input, _repeated_playerActions_codec);
+            Name = input.ReadString();
             break;
           }
           case 26: {
+            playerActions_.AddEntriesFrom(ref input, _repeated_playerActions_codec);
+            break;
+          }
+          case 34: {
             holdCards_.AddEntriesFrom(ref input, _repeated_holdCards_codec);
             break;
           }
-          case 32: {
+          case 40: {
             IsFold = input.ReadBool();
             break;
           }
-          case 40: {
+          case 48: {
             IsAllin = input.ReadBool();
             break;
           }
-          case 48: {
+          case 56: {
             IsBoss = input.ReadBool();
             break;
           }
-          case 56: {
+          case 64: {
             Out = input.ReadBool();
             break;
           }
-          case 65: {
+          case 73: {
             Score = input.ReadDouble();
             break;
           }
-          case 72: {
+          case 80: {
             Chips = input.ReadUInt32();
             break;
           }
-          case 80: {
+          case 88: {
             BetChips = input.ReadUInt32();
             break;
           }
-          case 88: {
-            BullBearBet = (global::Pbm.BullBearBet) input.ReadEnum();
-            break;
-          }
           case 96: {
-            SeatStatus = (global::Pbm.SeatStatus) input.ReadEnum();
+            BullBearBet = (global::Pbm.BullBearBet) input.ReadEnum();
             break;
           }
         }
@@ -9716,7 +9728,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResJoinPlayer(ResJoinPlayer other) : this() {
-      players_ = other.players_ != null ? other.players_.Clone() : null;
+      player_ = other.player_ != null ? other.player_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -9726,15 +9738,15 @@ namespace Pbm {
       return new ResJoinPlayer(this);
     }
 
-    /// <summary>Field number for the "players" field.</summary>
-    public const int PlayersFieldNumber = 1;
-    private global::Pbm.Player players_;
+    /// <summary>Field number for the "player" field.</summary>
+    public const int PlayerFieldNumber = 1;
+    private global::Pbm.Player player_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Pbm.Player Players {
-      get { return players_; }
+    public global::Pbm.Player Player {
+      get { return player_; }
       set {
-        players_ = value;
+        player_ = value;
       }
     }
 
@@ -9753,7 +9765,7 @@ namespace Pbm {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Players, other.Players)) return false;
+      if (!object.Equals(Player, other.Player)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -9761,7 +9773,7 @@ namespace Pbm {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (players_ != null) hash ^= Players.GetHashCode();
+      if (player_ != null) hash ^= Player.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9780,9 +9792,9 @@ namespace Pbm {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (players_ != null) {
+      if (player_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Players);
+        output.WriteMessage(Player);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -9794,9 +9806,9 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (players_ != null) {
+      if (player_ != null) {
         output.WriteRawTag(10);
-        output.WriteMessage(Players);
+        output.WriteMessage(Player);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -9808,8 +9820,8 @@ namespace Pbm {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (players_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Players);
+      if (player_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Player);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9823,11 +9835,11 @@ namespace Pbm {
       if (other == null) {
         return;
       }
-      if (other.players_ != null) {
-        if (players_ == null) {
-          Players = new global::Pbm.Player();
+      if (other.player_ != null) {
+        if (player_ == null) {
+          Player = new global::Pbm.Player();
         }
-        Players.MergeFrom(other.Players);
+        Player.MergeFrom(other.Player);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9849,10 +9861,10 @@ namespace Pbm {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (players_ == null) {
-              Players = new global::Pbm.Player();
+            if (player_ == null) {
+              Player = new global::Pbm.Player();
             }
-            input.ReadMessage(Players);
+            input.ReadMessage(Player);
             break;
           }
         }
@@ -9875,10 +9887,217 @@ namespace Pbm {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (players_ == null) {
-              Players = new global::Pbm.Player();
+            if (player_ == null) {
+              Player = new global::Pbm.Player();
             }
-            input.ReadMessage(Players);
+            input.ReadMessage(Player);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ResRegistPlayer : pb::IMessage<ResRegistPlayer>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ResRegistPlayer> _parser = new pb::MessageParser<ResRegistPlayer>(() => new ResRegistPlayer());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ResRegistPlayer> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResRegistPlayer() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResRegistPlayer(ResRegistPlayer other) : this() {
+      player_ = other.player_ != null ? other.player_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResRegistPlayer Clone() {
+      return new ResRegistPlayer(this);
+    }
+
+    /// <summary>Field number for the "player" field.</summary>
+    public const int PlayerFieldNumber = 1;
+    private global::Pbm.Player player_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Pbm.Player Player {
+      get { return player_; }
+      set {
+        player_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ResRegistPlayer);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ResRegistPlayer other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Player, other.Player)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (player_ != null) hash ^= Player.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (player_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Player);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (player_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Player);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (player_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Player);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ResRegistPlayer other) {
+      if (other == null) {
+        return;
+      }
+      if (other.player_ != null) {
+        if (player_ == null) {
+          Player = new global::Pbm.Player();
+        }
+        Player.MergeFrom(other.Player);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (player_ == null) {
+              Player = new global::Pbm.Player();
+            }
+            input.ReadMessage(Player);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (player_ == null) {
+              Player = new global::Pbm.Player();
+            }
+            input.ReadMessage(Player);
             break;
           }
         }
@@ -9903,7 +10122,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
