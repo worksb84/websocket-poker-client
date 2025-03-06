@@ -5,7 +5,7 @@ public class PlayCard : Card
 {
     public override void SetFlip(bool flip)
     {
-        Back.SetActive(flip);
+        Back.SetActive(!flip);
     }
 
     public override void SetCard(Pbm.Card card)
@@ -32,12 +32,8 @@ public class PlayCard : Card
         {
             SelectOpenCard = new Pbm.SelectOpenCard()
             {
-                Symbol = Card_.S,
-                Seat = new Pbm.Seat()
-                {
-                    Uid = 1,
-                    Seat_ = 1
-                },
+                Card = Card_,
+                Seat = Episode04.Instance.Seat
             }
         };
 

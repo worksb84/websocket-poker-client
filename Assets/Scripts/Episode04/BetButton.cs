@@ -23,9 +23,9 @@ public class BetButton : MonoBehaviour
         button.onClick.RemoveAllListeners();
         if (enable)
         {
-            Debug.Log(enable);
             Enable();
-            _betText.text = chips.ToString();
+            _betAmount.text = chips.ToString();
+            _betAmount.gameObject.SetActive(true);
             button.onClick.AddListener(() => Bet(bet, chips, betButtonGroup));
         }
         else
@@ -51,11 +51,7 @@ public class BetButton : MonoBehaviour
         var req = new Pbm.ReqBet() {
             Bet = bet,
             Chips = chips,
-            Seat = new Pbm.Seat()
-            {
-                Seat_ = 1,
-                Uid = 1,
-            }
+            Seat = Episode04.Instance.Seat
         };
 
         GameManager.Network.Send(req);

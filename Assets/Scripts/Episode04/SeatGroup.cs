@@ -24,16 +24,35 @@ public class SeatGroup : MonoBehaviour
 
     [SerializeField] private float _waitForSeconds = 0.2f;
 
+    private int _anchor = -1;
+
+
+    private void OnEnable()
+    {
+        GameManager.Event.OnResBet += Event_OnResBet;
+        GameManager.Event.OnResStreetBoss += Event_OnResStreetBoss;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Event.OnResBet -= Event_OnResBet;
+        GameManager.Event.OnResStreetBoss -= Event_OnResStreetBoss;
+    }
     private void Start()
     {
         _seats.Clear();
-        _seats.Add(_seat4);
-        _seats.Add(_seat5);
         _seats.Add(_seat1);
         _seats.Add(_seat2);
         _seats.Add(_seat3);
+        _seats.Add(_seat4);
+        _seats.Add(_seat5);
     }
-
+    private void Event_OnResStreetBoss(object sender, ResStreetBoss e)
+    {
+        Debug.Log("Event_OnResStreetBoss");
+        Debug.Log(e);
+        StreetBoss(e);
+    }
 
     internal IEnumerator SetStreet3Card(ResDealStreet3Card e, UnityAction action)
     {
@@ -45,7 +64,7 @@ public class SeatGroup : MonoBehaviour
             {
                 if (seat.Seat_.Seat_ != -1)
                 {
-                    StartCoroutine(seat.SetStreet3Card());
+                    StartCoroutine(seat.SetStreet3Card(_waitForSeconds));
                     yield return new WaitForSeconds(_waitForSeconds);
                 }
             }
@@ -76,8 +95,7 @@ public class SeatGroup : MonoBehaviour
             seat.SetOpenCard(selectOpenCard);
         }
     }
-
-    internal void Bet(ResBet e)
+    private void Event_OnResBet(object sender, ResBet e)
     {
         var seat = FindBySeat(e.Seat);
         seat.SetBet(e);
@@ -85,18 +103,42 @@ public class SeatGroup : MonoBehaviour
 
     internal void StreetBoss(ResStreetBoss e)
     {
+        foreach (var _seat in _seats)
+        {
+            _seat.ResetStreetBoss();
+        }
         var seat = FindBySeat(e.Seat);
         seat.SetStreetBoss();
     }
 
-    internal void SetSelf(ResRegistPlayer e)
+    internal void SetSeat(Player player, bool isSelf)
     {
-        _seat3.Seat_ = e.Player.Seat;
-        _seat3.IsSelf = true;
+        if (isSelf)
+        {
+            _anchor = player.Seat.Seat_;
+            Episode04.Instance.Seat = player.Seat;
+            Episode04.Instance.Uid = player.Seat.Uid;
+        }
+        var idx = (player.Seat.Seat_ - _anchor + _seats.Count) % _seats.Count;
+        var seat = _seats[idx];
+        seat.SetSeat(player, isSelf);
     }
 
     private Seat FindBySeat(Pbm.Seat seat)
     {
         return _seats.Find(x => x.Seat_.Seat_ == seat.Seat_);
+    }
+
+    internal void SetPlayer(ResJoinPlayer e)
+    {
+        SetSeat(e.Player, false);
+    }
+
+    internal void SetOtherPlayers(ResOtherPlayers e)
+    {
+        foreach (var player in e.Players)
+        {
+            SetSeat(player, false);
+        }
     }
 }

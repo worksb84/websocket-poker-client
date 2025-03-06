@@ -1,6 +1,7 @@
 using Best.WebSockets;
 using System;
 using System.Collections;
+using UnityEngine;
 
 public class GameManager : Singleton<GameManager>
 {
@@ -14,6 +15,11 @@ public class GameManager : Singleton<GameManager>
     public static SoundManager Sound { get { return Instance._soundManager.Value; } }
     public static ResourceManager Resource { get { return Instance._resourceManager.Value; } }
     public static RestAPIManager RestAPI { get { return Instance._restAPIManager.Value; } }
+
+    private void Start()
+    {
+        Application.runInBackground = true;
+    }
 
     public void Connect(string tableId)
     {

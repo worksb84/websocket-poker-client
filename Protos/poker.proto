@@ -181,7 +181,7 @@ message ResDealStreet3Card {
 
 message SelectOpenCard {
     Seat seat                                       = 1;
-    string symbol                                   = 2;
+    Card card                                       = 2;
 }
 
 message ReqSelectOpenCard {

@@ -74,9 +74,9 @@ public class NetworkManager
         if (_webSocket.IsOpen)
         {
             var jsonString = Utils.Marshal(message);
+            UnityEngine.Debug.Log(jsonString);
             _webSocket.Send(jsonString);
-        }
-        ;
+        };
     }
 
 

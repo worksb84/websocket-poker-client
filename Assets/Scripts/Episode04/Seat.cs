@@ -16,6 +16,7 @@ public class Seat : MonoBehaviour
     [Header("Images")]
     [SerializeField] private Image _profileImage;
     [SerializeField] private Image _betImage;
+    [SerializeField] private Image _bossImage;
 
     [Header("Texts")]
     [SerializeField] private TMP_Text _nameText;
@@ -40,6 +41,7 @@ public class Seat : MonoBehaviour
     public TMP_Text RateText { get { return _rateText; } set { _rateText = value; } }
     public TMP_Text PreviousBetAmount { get { return _previousBetAmount; } set { _previousBetAmount = value; } }
     public Image BetImage { get { return _betImage; } set { _betImage = value; } }
+    public Image BossImage { get { return _bossImage; } set { _bossImage = value; } }
     public TMP_Text ResultText { get { return _resultText; } set { _resultText = value; } }
     public TMP_Text ResultAmount { get { return _resultAmount; } set { _resultAmount = value; } }
     public TMP_Text WaitPlayerText { get { return _waitPlayerText; } set { _waitPlayerText = value; } }
@@ -65,20 +67,23 @@ public class Seat : MonoBehaviour
 
     private void Start()
     {
-        StartTimer();
+        //StartTimer();
         Initialize();
     }
 
     private void Initialize()
     {
-        _seat = new Pbm.Seat() { Seat_ = -1, Uid = 0, Rate = 0 };
+        _seat = new Pbm.Seat() { Seat_ = -1, Uid = -1, Rate = 0 };
         _dealCards.Clear();
         _dealCardCount = 0;
         _profileImage.sprite = null;
         _nameText.text = string.Empty;
         _rateText.text = string.Empty;
+        _previousBetAmount.text = string.Empty;
 
         _profileImage.gameObject.SetActive(false);
+        _betImage.gameObject.SetActive(false);
+        _bossImage.gameObject.SetActive(false);
         _nameText.gameObject.SetActive(false);
         _rateText.gameObject.SetActive(false);
 
@@ -90,7 +95,7 @@ public class Seat : MonoBehaviour
         _resultGroup.SetActive(false);
     }
 
-    internal IEnumerator SetStreet3Card()
+    internal IEnumerator SetStreet3Card(float waitForSeconds)
     {
         yield return new WaitForSeconds(0.01f);
         var rect = _cardGroup.GetComponent<RectTransform>();
@@ -115,8 +120,8 @@ public class Seat : MonoBehaviour
         cardRect.anchoredPosition = new Vector2(0, 800f);
 
         var seq = DOTween.Sequence();
-        seq.Append(cardRect.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), 0.2f));
-        seq.Join(cardRect.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), 0.2f));
+        seq.Append(cardRect.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), waitForSeconds));
+        seq.Join(cardRect.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), waitForSeconds));
         seq.Play();
 
         _dealCardCount++;
@@ -168,9 +173,27 @@ public class Seat : MonoBehaviour
 
     internal void SetOpenCard(SelectOpenCard selectOpenCard)
     {
-        var idx = _dealCards.FindIndex(x => { return x.GetComponent<PlayCard>().Card_.S == selectOpenCard.Symbol; });
-        (_dealCards[2], _dealCards[idx]) = (_dealCards[idx], _dealCards[2]);
-        _dealCards[2].GetComponent<PlayCard>().SetFlip(true);
+        if(_isSelf)
+        {
+            var idx = _dealCards.FindIndex(x => { return x.GetComponent<PlayCard>().Card_.S == selectOpenCard.Card.S; });
+            var temp = _dealCards[2].GetComponent<PlayCard>();
+            var tempPropertie = temp.Card_;
+            var open = _dealCards[idx].GetComponent<PlayCard>();
+            var openPropertie = open.Card_;
+            temp.SetCard(openPropertie);
+            open.SetCard(tempPropertie);
+
+            foreach (var dealCard in _dealCards)
+            {
+                dealCard.GetComponent<PlayCard>().SetFlip(true);
+            }
+        }
+        else
+        {
+            var dealCard = _dealCards[2].GetComponent<PlayCard>();
+            dealCard.SetCard(selectOpenCard.Card);
+            dealCard.SetFlip(true);
+        }
     }
 
     internal void SetCard(ResDealStreet3Card e)
@@ -184,11 +207,27 @@ public class Seat : MonoBehaviour
 
     internal void SetBet(ResBet e)
     {
-        throw new System.NotImplementedException();
+        _betImage.gameObject.SetActive(true);
+        _previousBetAmount.text = e.Chips.ToString();
     }
 
     internal void SetStreetBoss()
     {
-        throw new System.NotImplementedException();
+        _bossImage.gameObject.SetActive(true);
+    }
+
+    internal void ResetStreetBoss()
+    {
+        _bossImage.gameObject.SetActive(false);
+    }
+
+    internal void SetSeat(Player player, bool isSelf)
+    {
+        _seat = player.Seat;
+        _isSelf = isSelf;
+        _profileImage.gameObject.SetActive(true);
+        _nameText.gameObject.SetActive(true);
+        _nameText.text = player.Name;
+        _waitPlayerText.gameObject.SetActive(false);
     }
 }

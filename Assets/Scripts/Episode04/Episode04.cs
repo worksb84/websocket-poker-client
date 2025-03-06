@@ -1,5 +1,4 @@
 using Pbm;
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -28,6 +27,12 @@ public class Episode04 : MonoBehaviour
             return _instance;
         }
     }
+    [Header("Player Properties")]
+    [SerializeField] private int _uid = -1;
+    [SerializeField] private Pbm.Seat _seat = new();
+
+    public int Uid { get { return Instance._uid; } set { Instance._uid = value; } }
+    public Pbm.Seat Seat { get { return Instance._seat; } set { Instance._seat = value; } }
 
     [Header("Groups")]
     [SerializeField] private TopGroup _topGroup;
@@ -49,19 +54,6 @@ public class Episode04 : MonoBehaviour
 
         _shuffleGroup.StartShuffle();
         //_seatGroup.Deal(3);
-    }
-
-    private void Event_OnResTimer(object sender, ResTimer e)
-    {
-        Debug.Log("Event_OnResTimer");
-        Debug.Log(e);
-    }
-
-    private void Event_OnResStreetBoss(object sender, ResStreetBoss e)
-    {
-        Debug.Log("Event_OnResStreetBoss");
-        Debug.Log(e);
-        _seatGroup.StreetBoss(e);
     }
 
     private void Event_OnResStartStreet(object sender, ResStartStreet e)
@@ -86,6 +78,7 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResOtherPlayers");
         Debug.Log(e);
+        _seatGroup.SetOtherPlayers(e);
     }
 
     private void Event_OnResMoveRoom(object sender, ResMoveRoom e)
@@ -104,6 +97,7 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResJoinPlayer");
         Debug.Log(e);
+        _seatGroup.SetPlayer(e);
     }
 
 
@@ -120,16 +114,8 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
     }
 
-    private void Event_OnResBet(object sender, ResBet e)
-    {
-        Debug.Log("Event_OnResBet");
-        Debug.Log(e);
-        _seatGroup.Bet(e);
-    }
-
     private void OnEnable()
     {
-        GameManager.Event.OnResBet += Event_OnResBet;
         GameManager.Event.OnResBullBear += Event_OnResBullBear;
         GameManager.Event.OnResBullBearReady += Event_OnResBullBearReady;
         GameManager.Event.OnResDealCard += Event_OnResDealCard;
@@ -145,13 +131,10 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResSelectOpenCard += Event_OnResSelectOpenCard;
         GameManager.Event.OnResShuffleCard += Event_OnResShuffleCard;
         GameManager.Event.OnResStartStreet += Event_OnResStartStreet;
-        GameManager.Event.OnResStreetBoss += Event_OnResStreetBoss;
-        GameManager.Event.OnResTimer += Event_OnResTimer;
     }
 
     private void OnDisable()
     {
-        GameManager.Event.OnResBet -= Event_OnResBet;
         GameManager.Event.OnResBullBear -= Event_OnResBullBear;
         GameManager.Event.OnResBullBearReady -= Event_OnResBullBearReady;
         GameManager.Event.OnResDealCard -= Event_OnResDealCard;
@@ -167,8 +150,6 @@ public class Episode04 : MonoBehaviour
         GameManager.Event.OnResSelectOpenCard -= Event_OnResSelectOpenCard;
         GameManager.Event.OnResShuffleCard -= Event_OnResShuffleCard;
         GameManager.Event.OnResStartStreet -= Event_OnResStartStreet;
-        GameManager.Event.OnResStreetBoss -= Event_OnResStreetBoss;
-        GameManager.Event.OnResTimer -= Event_OnResTimer;
     }
 
 
@@ -176,7 +157,7 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResRegistPlayer");
         Debug.Log(e);
-        _seatGroup.SetSelf(e);
+        _seatGroup.SetSeat(e.Player, true);
     }
 
     private void Event_OnResBullBearReady(object sender, ResBullBearReady e)
@@ -207,6 +188,7 @@ public class Episode04 : MonoBehaviour
         Debug.Log(e);
 
         _seatGroup.SetOpenCard(e);
+        _choiceGroup.gameObject.SetActive(false);
     }
 
     private void Event_OnResGameStart(object sender, ResGameStart e)

@@ -52,50 +52,50 @@ namespace Pbm {
             "YXRTdGF0dXMiEgoQUmVxRW50ZXJHYW1lUm9vbSISChBSZXNFbnRlckdhbWVS",
             "b29tIh8KCFJlc1JlYWR5EhMKBHNlYXQYASABKAsyBS5TZWF0Ig4KDFJlc0dh",
             "bWVTdGFydCIQCg5SZXNTaHVmZmxlQ2FyZCIqChJSZXNEZWFsU3RyZWV0M0Nh",
-            "cmQSFAoFY2FyZHMYASADKAsyBS5DYXJkIjUKDlNlbGVjdE9wZW5DYXJkEhMK",
-            "BHNlYXQYASABKAsyBS5TZWF0Eg4KBnN5bWJvbBgCIAEoCSI8ChFSZXFTZWxl",
-            "Y3RPcGVuQ2FyZBInCg5zZWxlY3RPcGVuQ2FyZBgBIAEoCzIPLlNlbGVjdE9w",
-            "ZW5DYXJkIj0KEVJlc1NlbGVjdE9wZW5DYXJkEigKD3NlbGVjdE9wZW5DYXJk",
-            "cxgBIAMoCzIPLlNlbGVjdE9wZW5DYXJkIiQKDVJlc1N0cmVldEJvc3MSEwoE",
-            "c2VhdBgBIAEoCzIFLlNlYXQiEAoOUmVzU3RhcnRTdHJlZXQiPwoGUmVxQmV0",
-            "EhMKBHNlYXQYASABKAsyBS5TZWF0EhEKA2JldBgCIAEoDjIELkJldBINCgVj",
-            "aGlwcxgDIAEoByI/CgZSZXNCZXQSEwoEc2VhdBgBIAEoCzIFLlNlYXQSEQoD",
-            "YmV0GAIgASgOMgQuQmV0Eg0KBWNoaXBzGAMgASgHIiMKC1Jlc0RlYWxDYXJk",
-            "EhQKBWNhcmRzGAEgASgLMgUuQ2FyZCISChBSZXNCdWxsQmVhclJlYWR5IkUK",
-            "C1JlcUJ1bGxCZWFyEhMKBHNlYXQYASABKAsyBS5TZWF0EiEKC2J1bGxCZWFy",
-            "QmV0GAIgASgOMgwuQnVsbEJlYXJCZXQiIgoLUmVzQnVsbEJlYXISEwoEc2Vh",
-            "dBgBIAEoCzIFLlNlYXQiMAoJUmVzUmVzdWx0EhMKBHNlYXQYASABKAsyBS5T",
-            "ZWF0Eg4KBmFtb3VudBgDIAEoASIfCghSZXFMZWF2ZRITCgRzZWF0GAEgASgL",
-            "MgUuU2VhdCIfCghSZXNMZWF2ZRITCgRzZWF0GAEgASgLMgUuU2VhdCIiCgtS",
-            "ZXFNb3ZlUm9vbRITCgRzZWF0GAEgASgLMgUuU2VhdCIiCgtSZXNNb3ZlUm9v",
-            "bRITCgRzZWF0GAEgASgLMgUuU2VhdCI9CglFbmFibGVCZXQSEQoDYmV0GAEg",
-            "ASgOMgQuQmV0Eg0KBWNoaXBzGAIgASgNEg4KBmVuYWJsZRgDIAEoCCItCgxS",
-            "ZXNFbmFibGVCZXQSHQoJZW5hYmxlQmV0GAEgAygLMgouRW5hYmxlQmV0InUK",
-            "C1RhYmxlQ29uZmlnEg8KB3RhYmxlSWQYASABKAkSEwoEZ2FtZRgCIAEoDjIF",
-            "LkdhbWUSDgoGcmVnaW9uGAMgASgJEg8KB21heFNlYXQYBCABKAUSEQoJY2Fy",
-            "ZExpbWl0GAUgASgFEgwKBGFudGUYBiABKA0iKwoPUmVzT3RoZXJQbGF5ZXJz",
-            "EhgKB3BsYXllcnMYASADKAsyBy5QbGF5ZXIiKAoNUmVzSm9pblBsYXllchIX",
-            "CgZwbGF5ZXIYASABKAsyBy5QbGF5ZXIiKgoPUmVzUmVnaXN0UGxheWVyEhcK",
-            "BnBsYXllchgBIAEoCzIHLlBsYXllciItCghSZXNUaW1lchITCgRzZWF0GAEg",
-            "ASgLMgUuU2VhdBIMCgR0aW1lGAIgASgFKosECgJJRBIICgROb25lEAASCwoH",
-            "VGVzdGluZxABEg4KCVJlc19SZWFkeRCgHxISCg1SZXNfR2FtZVN0YXJ0EKEf",
-            "EhQKD1Jlc19TaHVmZmxlQ2FyZBCiHxIYChNSZXNfRGVhbFN0cmVldDNDYXJk",
-            "EKMfEhcKElJlcV9TZWxlY3RPcGVuQ2FyZBCkHxIXChJSZXNfU2VsZWN0T3Bl",
-            "bkNhcmQQpR8SEwoOUmVzX1N0cmVldEJvc3MQph8SFAoPUmVzX1N0YXJ0U3Ry",
-            "ZWV0EKcfEgwKB1JlcV9CZXQQqB8SDAoHUmVzX0JldBCpHxIRCgxSZXNfRGVh",
-            "bENhcmQQqh8SFgoRUmVzX0J1bGxCZWFyUmVhZHkQqx8SEQoMUmVxX0J1bGxC",
-            "ZWFyEKwfEhEKDFJlc19CdWxsQmVhchCtHxIPCgpSZXNfUmVzdWx0EK4fEg4K",
-            "CVJlcV9MZWF2ZRCvHxIOCglSZXNfTGVhdmUQsB8SEQoMUmVxX01vdmVSb29t",
-            "ELEfEhEKDFJlc19Nb3ZlUm9vbRCyHxISCg1SZXNfRW5hYmxlQmV0ELMfEhUK",
-            "EFJlc19PdGhlclBsYXllcnMQtB8SEwoOUmVzX0pvaW5QbGF5ZXIQtR8SDgoJ",
-            "UmVzX1RpbWVyELYfEhUKEFJlc19SZWdpc3RQbGF5ZXIQtx8SEgoNUmVzX0Nv",
-            "dW50ZG93bhCPTio9CgRHYW1lEgkKBXNldmVuEAASDAoIYnVsbEJlYXIQARIM",
-            "Cghza2VsZXRvbhACEg4KCm1pZHVzVG91Y2gQAypZCgNCZXQSCQoFYnV5aW4Q",
-            "ABIJCgVjaGVjaxABEgkKBWJiaW5nEAISCAoEaGFsZhADEggKBGZ1bGwQBBIJ",
-            "CgVhbGxpbhAFEggKBGZvbGQQBhIICgRjYWxsEAcqPgoLQnVsbEJlYXJCZXQS",
-            "EAoMYnVsbEJlYXJOb25lEAASCAoEYnVsbBABEgkKBXN3aW5nEAISCAoEYmVh",
-            "chADKiwKClNlYXRTdGF0dXMSCQoFcmVhZHkQABIICgRwbGF5EAESCQoFbGVh",
-            "dmUQAkIPWgdwa2cvcGJtqgIDUGJtYgZwcm90bzM="));
+            "cmQSFAoFY2FyZHMYASADKAsyBS5DYXJkIjoKDlNlbGVjdE9wZW5DYXJkEhMK",
+            "BHNlYXQYASABKAsyBS5TZWF0EhMKBGNhcmQYAiABKAsyBS5DYXJkIjwKEVJl",
+            "cVNlbGVjdE9wZW5DYXJkEicKDnNlbGVjdE9wZW5DYXJkGAEgASgLMg8uU2Vs",
+            "ZWN0T3BlbkNhcmQiPQoRUmVzU2VsZWN0T3BlbkNhcmQSKAoPc2VsZWN0T3Bl",
+            "bkNhcmRzGAEgAygLMg8uU2VsZWN0T3BlbkNhcmQiJAoNUmVzU3RyZWV0Qm9z",
+            "cxITCgRzZWF0GAEgASgLMgUuU2VhdCIQCg5SZXNTdGFydFN0cmVldCI/CgZS",
+            "ZXFCZXQSEwoEc2VhdBgBIAEoCzIFLlNlYXQSEQoDYmV0GAIgASgOMgQuQmV0",
+            "Eg0KBWNoaXBzGAMgASgHIj8KBlJlc0JldBITCgRzZWF0GAEgASgLMgUuU2Vh",
+            "dBIRCgNiZXQYAiABKA4yBC5CZXQSDQoFY2hpcHMYAyABKAciIwoLUmVzRGVh",
+            "bENhcmQSFAoFY2FyZHMYASABKAsyBS5DYXJkIhIKEFJlc0J1bGxCZWFyUmVh",
+            "ZHkiRQoLUmVxQnVsbEJlYXISEwoEc2VhdBgBIAEoCzIFLlNlYXQSIQoLYnVs",
+            "bEJlYXJCZXQYAiABKA4yDC5CdWxsQmVhckJldCIiCgtSZXNCdWxsQmVhchIT",
+            "CgRzZWF0GAEgASgLMgUuU2VhdCIwCglSZXNSZXN1bHQSEwoEc2VhdBgBIAEo",
+            "CzIFLlNlYXQSDgoGYW1vdW50GAMgASgBIh8KCFJlcUxlYXZlEhMKBHNlYXQY",
+            "ASABKAsyBS5TZWF0Ih8KCFJlc0xlYXZlEhMKBHNlYXQYASABKAsyBS5TZWF0",
+            "IiIKC1JlcU1vdmVSb29tEhMKBHNlYXQYASABKAsyBS5TZWF0IiIKC1Jlc01v",
+            "dmVSb29tEhMKBHNlYXQYASABKAsyBS5TZWF0Ij0KCUVuYWJsZUJldBIRCgNi",
+            "ZXQYASABKA4yBC5CZXQSDQoFY2hpcHMYAiABKA0SDgoGZW5hYmxlGAMgASgI",
+            "Ii0KDFJlc0VuYWJsZUJldBIdCgllbmFibGVCZXQYASADKAsyCi5FbmFibGVC",
+            "ZXQidQoLVGFibGVDb25maWcSDwoHdGFibGVJZBgBIAEoCRITCgRnYW1lGAIg",
+            "ASgOMgUuR2FtZRIOCgZyZWdpb24YAyABKAkSDwoHbWF4U2VhdBgEIAEoBRIR",
+            "CgljYXJkTGltaXQYBSABKAUSDAoEYW50ZRgGIAEoDSIrCg9SZXNPdGhlclBs",
+            "YXllcnMSGAoHcGxheWVycxgBIAMoCzIHLlBsYXllciIoCg1SZXNKb2luUGxh",
+            "eWVyEhcKBnBsYXllchgBIAEoCzIHLlBsYXllciIqCg9SZXNSZWdpc3RQbGF5",
+            "ZXISFwoGcGxheWVyGAEgASgLMgcuUGxheWVyIi0KCFJlc1RpbWVyEhMKBHNl",
+            "YXQYASABKAsyBS5TZWF0EgwKBHRpbWUYAiABKAUqiwQKAklEEggKBE5vbmUQ",
+            "ABILCgdUZXN0aW5nEAESDgoJUmVzX1JlYWR5EKAfEhIKDVJlc19HYW1lU3Rh",
+            "cnQQoR8SFAoPUmVzX1NodWZmbGVDYXJkEKIfEhgKE1Jlc19EZWFsU3RyZWV0",
+            "M0NhcmQQox8SFwoSUmVxX1NlbGVjdE9wZW5DYXJkEKQfEhcKElJlc19TZWxl",
+            "Y3RPcGVuQ2FyZBClHxITCg5SZXNfU3RyZWV0Qm9zcxCmHxIUCg9SZXNfU3Rh",
+            "cnRTdHJlZXQQpx8SDAoHUmVxX0JldBCoHxIMCgdSZXNfQmV0EKkfEhEKDFJl",
+            "c19EZWFsQ2FyZBCqHxIWChFSZXNfQnVsbEJlYXJSZWFkeRCrHxIRCgxSZXFf",
+            "QnVsbEJlYXIQrB8SEQoMUmVzX0J1bGxCZWFyEK0fEg8KClJlc19SZXN1bHQQ",
+            "rh8SDgoJUmVxX0xlYXZlEK8fEg4KCVJlc19MZWF2ZRCwHxIRCgxSZXFfTW92",
+            "ZVJvb20QsR8SEQoMUmVzX01vdmVSb29tELIfEhIKDVJlc19FbmFibGVCZXQQ",
+            "sx8SFQoQUmVzX090aGVyUGxheWVycxC0HxITCg5SZXNfSm9pblBsYXllchC1",
+            "HxIOCglSZXNfVGltZXIQth8SFQoQUmVzX1JlZ2lzdFBsYXllchC3HxISCg1S",
+            "ZXNfQ291bnRkb3duEI9OKj0KBEdhbWUSCQoFc2V2ZW4QABIMCghidWxsQmVh",
+            "chABEgwKCHNrZWxldG9uEAISDgoKbWlkdXNUb3VjaBADKlkKA0JldBIJCgVi",
+            "dXlpbhAAEgkKBWNoZWNrEAESCQoFYmJpbmcQAhIICgRoYWxmEAMSCAoEZnVs",
+            "bBAEEgkKBWFsbGluEAUSCAoEZm9sZBAGEggKBGNhbGwQByo+CgtCdWxsQmVh",
+            "ckJldBIQCgxidWxsQmVhck5vbmUQABIICgRidWxsEAESCQoFc3dpbmcQAhII",
+            "CgRiZWFyEAMqLAoKU2VhdFN0YXR1cxIJCgVyZWFkeRAAEggKBHBsYXkQARIJ",
+            "CgVsZWF2ZRACQg9aB3BrZy9wYm2qAgNQYm1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pbm.ID), typeof(global::Pbm.Game), typeof(global::Pbm.Bet), typeof(global::Pbm.BullBearBet), typeof(global::Pbm.SeatStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,7 +119,7 @@ namespace Pbm {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResGameStart), global::Pbm.ResGameStart.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResShuffleCard), global::Pbm.ResShuffleCard.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResDealStreet3Card), global::Pbm.ResDealStreet3Card.Parser, new[]{ "Cards" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.SelectOpenCard), global::Pbm.SelectOpenCard.Parser, new[]{ "Seat", "Symbol" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.SelectOpenCard), global::Pbm.SelectOpenCard.Parser, new[]{ "Seat", "Card" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ReqSelectOpenCard), global::Pbm.ReqSelectOpenCard.Parser, new[]{ "SelectOpenCard" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResSelectOpenCard), global::Pbm.ResSelectOpenCard.Parser, new[]{ "SelectOpenCards" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResStreetBoss), global::Pbm.ResStreetBoss.Parser, new[]{ "Seat" }, null, null, null, null),
@@ -5241,7 +5241,7 @@ namespace Pbm {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectOpenCard(SelectOpenCard other) : this() {
       seat_ = other.seat_ != null ? other.seat_.Clone() : null;
-      symbol_ = other.symbol_;
+      card_ = other.card_ != null ? other.card_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5263,15 +5263,15 @@ namespace Pbm {
       }
     }
 
-    /// <summary>Field number for the "symbol" field.</summary>
-    public const int SymbolFieldNumber = 2;
-    private string symbol_ = "";
+    /// <summary>Field number for the "card" field.</summary>
+    public const int CardFieldNumber = 2;
+    private global::Pbm.Card card_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Symbol {
-      get { return symbol_; }
+    public global::Pbm.Card Card {
+      get { return card_; }
       set {
-        symbol_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        card_ = value;
       }
     }
 
@@ -5291,7 +5291,7 @@ namespace Pbm {
         return true;
       }
       if (!object.Equals(Seat, other.Seat)) return false;
-      if (Symbol != other.Symbol) return false;
+      if (!object.Equals(Card, other.Card)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5300,7 +5300,7 @@ namespace Pbm {
     public override int GetHashCode() {
       int hash = 1;
       if (seat_ != null) hash ^= Seat.GetHashCode();
-      if (Symbol.Length != 0) hash ^= Symbol.GetHashCode();
+      if (card_ != null) hash ^= Card.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5323,9 +5323,9 @@ namespace Pbm {
         output.WriteRawTag(10);
         output.WriteMessage(Seat);
       }
-      if (Symbol.Length != 0) {
+      if (card_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(Symbol);
+        output.WriteMessage(Card);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5341,9 +5341,9 @@ namespace Pbm {
         output.WriteRawTag(10);
         output.WriteMessage(Seat);
       }
-      if (Symbol.Length != 0) {
+      if (card_ != null) {
         output.WriteRawTag(18);
-        output.WriteString(Symbol);
+        output.WriteMessage(Card);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5358,8 +5358,8 @@ namespace Pbm {
       if (seat_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seat);
       }
-      if (Symbol.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Symbol);
+      if (card_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Card);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5379,8 +5379,11 @@ namespace Pbm {
         }
         Seat.MergeFrom(other.Seat);
       }
-      if (other.Symbol.Length != 0) {
-        Symbol = other.Symbol;
+      if (other.card_ != null) {
+        if (card_ == null) {
+          Card = new global::Pbm.Card();
+        }
+        Card.MergeFrom(other.Card);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5409,7 +5412,10 @@ namespace Pbm {
             break;
           }
           case 18: {
-            Symbol = input.ReadString();
+            if (card_ == null) {
+              Card = new global::Pbm.Card();
+            }
+            input.ReadMessage(Card);
             break;
           }
         }
@@ -5439,7 +5445,10 @@ namespace Pbm {
             break;
           }
           case 18: {
-            Symbol = input.ReadString();
+            if (card_ == null) {
+              Card = new global::Pbm.Card();
+            }
+            input.ReadMessage(Card);
             break;
           }
         }

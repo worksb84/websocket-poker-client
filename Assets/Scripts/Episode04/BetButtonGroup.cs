@@ -1,4 +1,5 @@
 using Pbm;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,14 +45,21 @@ public class BetButtonGroup : MonoBehaviour
     private void OnEnable()
     {
         GameManager.Event.OnResEnableBet += Event_OnResEnableBet;
+        GameManager.Event.OnResBet += Event_OnResBet;
+    }
+
+    private void Event_OnResBet(object sender, ResBet e)
+    {
+        Disable();
     }
 
     private void OnDisable()
     {
         GameManager.Event.OnResEnableBet -= Event_OnResEnableBet;
+        GameManager.Event.OnResBet -= Event_OnResBet;
     }
 
-    private void Event_OnResEnableBet(object sender, ResEnableBet e)
+    private void Event_OnResEnableBet(object sender, Pbm.ResEnableBet e)
     {
         Enable();
         foreach (var bet in e.EnableBet)
