@@ -30,6 +30,7 @@ enum ID {
     Res_JoinPlayer                                  = 4021;
     Res_Timer                                       = 4022;
     Res_RegistPlayer                                = 4023;
+    Res_Seat                                        = 4024;
 
     Res_Countdown                                   = 9999;
 }
@@ -155,6 +156,10 @@ message Seat {
     SeatStatus seatStatus                           = 4;
 }
 
+message ResSeat {
+    repeated Seat seats                             = 1;
+}
+
 message ReqEnterGameRoom {
 
 }
@@ -212,8 +217,13 @@ message ResBet {
     fixed32 chips                                   = 3;
 }
 
+message DealCard {
+    Seat seat                                       = 1;
+    Card card                                       = 2;
+}
+
 message ResDealCard {
-    Card cards                                      = 1;
+    repeated DealCard dealCards                     = 1;
 }
 
 message ResBullBearReady {

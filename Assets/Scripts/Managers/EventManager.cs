@@ -3,6 +3,7 @@ using System;
 
 public class EventManager
 {
+    public event EventHandler<Pbm.ResSeat> OnResSeat;
     public event EventHandler<Pbm.ResBet> OnResBet;
     public event EventHandler<Pbm.ResBullBear> OnResBullBear;
     public event EventHandler<Pbm.ResBullBearReady> OnResBullBearReady;
@@ -23,6 +24,7 @@ public class EventManager
     public event EventHandler<Pbm.ResStreetBoss> OnResStreetBoss;
     public event EventHandler<Pbm.ResTimer> OnResTimer;
 
+    public void OnResSeatEvent(IMessage res) => OnResSeat?.Invoke(this, (Pbm.ResSeat)res);
     public void OnResBetEvent(IMessage res) => OnResBet?.Invoke(this, (Pbm.ResBet)res);
     public void OnResBullBearEvent(IMessage res) => OnResBullBear?.Invoke(this, (Pbm.ResBullBear)res);
     public void OnResBullBearReadyEvent(IMessage res) => OnResBullBearReady?.Invoke(this, (Pbm.ResBullBearReady)res);

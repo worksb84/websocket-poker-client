@@ -31,12 +31,27 @@ public class SeatGroup : MonoBehaviour
     {
         GameManager.Event.OnResBet += Event_OnResBet;
         GameManager.Event.OnResStreetBoss += Event_OnResStreetBoss;
+        GameManager.Event.OnResSeat += Event_OnResSeat;
+    }
+
+    private void Event_OnResSeat(object sender, ResSeat e)
+    {
+        foreach (var seat_ in e.Seats)
+        {
+            var seat = FindBySeat(seat_);
+            seat.Seat_ = seat_;
+            if(seat.IsSelf)
+            {
+                Episode04.Instance.Seat = seat_;
+            }
+        }
     }
 
     private void OnDisable()
     {
         GameManager.Event.OnResBet -= Event_OnResBet;
         GameManager.Event.OnResStreetBoss -= Event_OnResStreetBoss;
+        GameManager.Event.OnResSeat -= Event_OnResSeat;
     }
     private void Start()
     {
@@ -139,6 +154,29 @@ public class SeatGroup : MonoBehaviour
         foreach (var player in e.Players)
         {
             SetSeat(player, false);
+        }
+    }
+
+    internal IEnumerator SetDealCard(ResDealCard e)
+    {
+        Debug.Log("SetDealCard");
+        yield return new WaitForSeconds(_waitForSeconds);
+
+        foreach (var dealCard in e.DealCards)
+        {
+            var seat = FindBySeat(dealCard.Seat);
+
+            StartCoroutine(seat.SetDealCard(dealCard, _waitForSeconds));
+            yield return new WaitForSeconds(_waitForSeconds);
+        }
+
+        yield return new WaitForSeconds(_waitForSeconds);
+
+        foreach (var dealCard in e.DealCards)
+        {
+            var seat = FindBySeat(dealCard.Seat);
+
+            seat.SetOpenDealCard(dealCard);
         }
     }
 }

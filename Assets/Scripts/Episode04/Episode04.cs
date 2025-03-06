@@ -106,6 +106,8 @@ public class Episode04 : MonoBehaviour
     {
         Debug.Log("Event_OnResDealCard");
         Debug.Log(e);
+
+        StartCoroutine(_seatGroup.SetDealCard(e));
     }
 
     private void Event_OnResBullBear(object sender, ResBullBear e)

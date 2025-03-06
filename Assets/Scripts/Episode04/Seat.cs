@@ -230,4 +230,46 @@ public class Seat : MonoBehaviour
         _nameText.text = player.Name;
         _waitPlayerText.gameObject.SetActive(false);
     }
+
+    internal IEnumerator SetDealCard(DealCard dealCard, float waitForSeconds)
+    {
+        yield return new WaitForSeconds(0.01f);
+        var rect = _cardGroup.GetComponent<RectTransform>();
+        var root = gameObject.transform.root.root.GetComponent<RectTransform>();
+
+        var bound = RectTransformUtility.CalculateRelativeRectTransformBounds(root, rect);
+        var cX = bound.center.x - bound.extents.x;
+        var cY = bound.center.y;
+
+        var card = GameManager.Resource.Instantiate("Prefabs/PlayCard");
+        card.transform.SetParent(_dealCardGroup.transform, false);
+
+        var playCard = card.GetComponent<PlayCard>();
+        playCard.SetCard(dealCard.Card);
+        _dealCards.Add(card);
+
+        var gap = _isSelf ? 75f : 46.67f;
+        var scale = _isSelf ? 1f : 0.6365f;
+
+        var cardRect = card.GetComponent<RectTransform>();
+        cardRect.anchorMin = Vector2.one * 0.5f;
+        cardRect.anchorMax = Vector2.one * 0.5f;
+        cardRect.pivot = new Vector2(0, 0.5f);
+        cardRect.localScale = Vector3.one * scale;
+        cardRect.anchoredPosition = new Vector2(0, 800f);
+
+        var seq = DOTween.Sequence();
+        seq.Append(cardRect.DOAnchorPos(new Vector2(cX + (_dealCardCount * gap), cY), waitForSeconds));
+        seq.Join(cardRect.DORotate(new Vector3(0f, 0f, Random.Range(-4f, 4f)), waitForSeconds));
+        seq.Play();
+
+        _dealCardCount++;
+    }
+
+    internal void SetOpenDealCard(DealCard dealCard)
+    {
+        var idx = _dealCards.FindIndex(x => { return x.GetComponent<PlayCard>().Card_.S == dealCard.Card.S; });
+        var card = _dealCards[idx];
+        card.GetComponent<PlayCard>().SetFlip(true);
+    }
 }

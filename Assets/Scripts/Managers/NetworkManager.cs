@@ -13,6 +13,7 @@ public class NetworkManager
 
     public NetworkManager()
     {
+        _funcMap.Add(Pbm.ID.ResSeat, (Utils.Unmarshal<Pbm.ResSeat>, GameManager.Event.OnResSeatEvent));
         _funcMap.Add(Pbm.ID.ResBet, (Utils.Unmarshal<Pbm.ResBet>, GameManager.Event.OnResBetEvent));
         _funcMap.Add(Pbm.ID.ResBullBear, (Utils.Unmarshal<Pbm.ResBullBear>, GameManager.Event.OnResBullBearEvent));
         _funcMap.Add(Pbm.ID.ResBullBearReady, (Utils.Unmarshal<Pbm.ResBullBearReady>, GameManager.Event.OnResBullBearReadyEvent));
