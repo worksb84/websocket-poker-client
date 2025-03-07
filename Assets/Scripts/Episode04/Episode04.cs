@@ -158,14 +158,12 @@ public class Episode04 : MonoBehaviour
     private void Event_OnResRegistPlayer(object sender, ResRegistPlayer e)
     {
         Debug.Log("Event_OnResRegistPlayer");
-        Debug.Log(e);
         _seatGroup.SetSeat(e.Player, true);
     }
 
     private void Event_OnResBullBearReady(object sender, ResBullBearReady e)
     {
         Debug.Log("Event_OnResBullBearReady");
-        Debug.Log(e);
         _betButtonGroup.gameObject.SetActive(false);
         _hiLoButtonGroup.gameObject.SetActive(true);
     }
@@ -173,7 +171,6 @@ public class Episode04 : MonoBehaviour
     private void Event_OnResDealStreet3Card(object sender, ResDealStreet3Card e)
     {
         Debug.Log("Event_OnResDealStreet3Card");
-        Debug.Log(e);
 
         UnityAction action = (() =>
         {
@@ -187,7 +184,6 @@ public class Episode04 : MonoBehaviour
     private void Event_OnResSelectOpenCard(object sender, ResSelectOpenCard e)
     {
         Debug.Log("Event_OnResSelectOpenCard");
-        Debug.Log(e);
 
         _seatGroup.SetOpenCard(e);
         _choiceGroup.gameObject.SetActive(false);
@@ -196,14 +192,12 @@ public class Episode04 : MonoBehaviour
     private void Event_OnResGameStart(object sender, ResGameStart e)
     {
         Debug.Log("Event_OnResGameStart");
-        Debug.Log(e);
         _shuffleGroup.gameObject.SetActive(false);
     }
 
     private void Event_OnResShuffleCard(object sender, ResShuffleCard e)
     {
         Debug.Log("Event_OnResShuffleCard");
-        Debug.Log(e);
         _shuffleGroup.gameObject.SetActive(true);
     }
 }

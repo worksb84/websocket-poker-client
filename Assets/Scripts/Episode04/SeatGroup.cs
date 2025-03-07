@@ -40,7 +40,7 @@ public class SeatGroup : MonoBehaviour
         {
             var seat = FindBySeat(seat_);
             seat.Seat_ = seat_;
-            if(seat.IsSelf)
+            if (seat.IsSelf)
             {
                 Episode04.Instance.Seat = seat_;
             }
@@ -79,7 +79,7 @@ public class SeatGroup : MonoBehaviour
             {
                 if (seat.Seat_.Seat_ != -1)
                 {
-                    StartCoroutine(seat.SetStreet3Card(_waitForSeconds));
+                    StartCoroutine(seat.SetDealCard(_waitForSeconds));
                     yield return new WaitForSeconds(_waitForSeconds);
                 }
             }
@@ -135,6 +135,8 @@ public class SeatGroup : MonoBehaviour
             Episode04.Instance.Uid = player.Seat.Uid;
         }
         var idx = (player.Seat.Seat_ - _anchor + _seats.Count) % _seats.Count;
+        Debug.Log(idx);
+        Debug.Log(isSelf);
         var seat = _seats[idx];
         seat.SetSeat(player, isSelf);
     }
@@ -166,11 +168,20 @@ public class SeatGroup : MonoBehaviour
         {
             var seat = FindBySeat(dealCard.Seat);
 
-            StartCoroutine(seat.SetDealCard(dealCard, _waitForSeconds));
+            StartCoroutine(seat.SetDealCard(_waitForSeconds));
             yield return new WaitForSeconds(_waitForSeconds);
         }
 
         yield return new WaitForSeconds(_waitForSeconds);
+
+
+        foreach (var seat in _seats)
+        {
+            if (seat.Seat_.Seat_ != -1)
+            {
+                seat.SetSort();
+            }
+        }
 
         foreach (var dealCard in e.DealCards)
         {
