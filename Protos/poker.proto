@@ -31,6 +31,7 @@ enum ID {
     Res_Timer                                       = 4022;
     Res_RegistPlayer                                = 4023;
     Res_Seat                                        = 4024;
+    Res_TableInformation                            = 4025;
 
     Res_Countdown                                   = 9999;
 }
@@ -73,6 +74,14 @@ message TableInformation {
     uint32 ante                                     = 4;
     uint32 usedSeat                                 = 5;
     uint32 maxSeat                                  = 6;
+}
+
+message ResTableInformation {
+    uint32 ante                                     = 1;
+    uint32 total                                    = 2;
+    string tableId                                  = 3;
+    string region                                   = 4;
+    Game game                                       = 5;
 }
 
 message ReqGenerateTable {

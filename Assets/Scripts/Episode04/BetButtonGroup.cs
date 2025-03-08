@@ -1,5 +1,3 @@
-using Pbm;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -48,7 +46,7 @@ public class BetButtonGroup : MonoBehaviour
         GameManager.Event.OnResBet += Event_OnResBet;
     }
 
-    private void Event_OnResBet(object sender, ResBet e)
+    private void Event_OnResBet(object sender, Pbm.ResBet e)
     {
         Disable();
     }

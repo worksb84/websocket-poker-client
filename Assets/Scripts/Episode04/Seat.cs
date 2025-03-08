@@ -234,6 +234,7 @@ public class Seat : MonoBehaviour
 
     internal void SetOpenDealCard(DealCard dealCard)
     {
+        //var idx = _dealCards.FindIndex(x => x.GetComponent<PlayCard>().Card_ != null && x.GetComponent<PlayCard>().Card_.S == dealCard.Card.S)
         var card = _dealCards[_dealCards.Count - 1];
         var playCard = card.GetComponent<PlayCard>();
         playCard.SetCard(dealCard.Card);

@@ -33,6 +33,7 @@ public class NetworkManager
         _funcMap.Add(Pbm.ID.ResStartStreet, (Utils.Unmarshal<Pbm.ResStartStreet>, GameManager.Event.OnResStartStreetEvent));
         _funcMap.Add(Pbm.ID.ResStreetBoss, (Utils.Unmarshal<Pbm.ResStreetBoss>, GameManager.Event.OnResStreetBossEvent));
         _funcMap.Add(Pbm.ID.ResTimer, (Utils.Unmarshal<Pbm.ResTimer>,  GameManager.Event.OnResTimerEvent));
+        _funcMap.Add(Pbm.ID.ResTableInformation, (Utils.Unmarshal<Pbm.ResTableInformation>, GameManager.Event.OnResTableInformationEvent));
     }
 
     public void Connect(string address, OnWebSocketOpenDelegate OnOpen)
@@ -56,11 +57,6 @@ public class NetworkManager
             BufferQueue.Instance.Push(msg);
         }
     }
-
-    //private void OnOpen(WebSocket webSocket)
-    //{
-    //    Update();
-    //}
 
     private void OnClosed(WebSocket webSocket, WebSocketStatusCodes code, string message)
     {
