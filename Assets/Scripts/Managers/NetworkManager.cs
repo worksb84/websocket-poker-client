@@ -34,6 +34,7 @@ public class NetworkManager
         _funcMap.Add(Pbm.ID.ResStreetBoss, (Utils.Unmarshal<Pbm.ResStreetBoss>, GameManager.Event.OnResStreetBossEvent));
         _funcMap.Add(Pbm.ID.ResTimer, (Utils.Unmarshal<Pbm.ResTimer>,  GameManager.Event.OnResTimerEvent));
         _funcMap.Add(Pbm.ID.ResTableInformation, (Utils.Unmarshal<Pbm.ResTableInformation>, GameManager.Event.OnResTableInformationEvent));
+        _funcMap.Add(Pbm.ID.ResChoiceCard, (Utils.Unmarshal<Pbm.ResChoiceCard>, GameManager.Event.OnResChoiceCardEvent));
     }
 
     public void Connect(string address, OnWebSocketOpenDelegate OnOpen)

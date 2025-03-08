@@ -19,27 +19,6 @@ public class PlayCard : Card
         ChangeRate.text = card.Cr.ToString("n2");
     }
 
-    internal void SetAction(UnityAction action)
-    {
-        var button = gameObject.GetComponent<Button>();
-        button.onClick.RemoveAllListeners();
-        button.onClick.AddListener(() => { SelectOpenCard(action); });
-    }
-
-    private void SelectOpenCard(UnityAction action)
-    {
-        var req = new Pbm.ReqSelectOpenCard()
-        {
-            SelectOpenCard = new Pbm.SelectOpenCard()
-            {
-                Card = Card_,
-                Seat = Episode04.Instance.Seat
-            }
-        };
-
-        action();
-    }
-
     // 0.6365 Scale
     // -173.33 OtherCardGroupGap
     // 46.67 PosX

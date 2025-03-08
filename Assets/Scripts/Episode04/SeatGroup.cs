@@ -190,4 +190,12 @@ public class SeatGroup : MonoBehaviour
             seat.SetOpenDealCard(dealCard);
         }
     }
+
+    internal bool SetChoice(ResChoiceCard e)
+    {
+        var seat = FindBySeat(e.Seat);
+        seat.ChoiceComplate();
+
+        return seat.IsSelf;
+    }
 }

@@ -1,8 +1,10 @@
 using DG.Tweening;
 using Pbm;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class ChoiceGroup : MonoBehaviour
 {
@@ -34,9 +36,8 @@ public class ChoiceGroup : MonoBehaviour
         GameManager.Event.OnResTimer -= Event_OnResTimer;
     }
 
-    private void Event_OnResTimer(object sender, ResTimer e)
+    private void Event_OnResTimer(object sender, Pbm.ResTimer e)
     {
-        Debug.Log("Event_OnResTimer");
         if (e.Time == 5)
         {
             StartTimer(e.Time);
@@ -60,8 +61,9 @@ public class ChoiceGroup : MonoBehaviour
         _timer.gameObject.SetActive(false);
     }
 
-    internal void SetCards(ResDealStreet3Card e)
+    internal void SetCards(Pbm.ResDealStreet3Card e)
     {
+        Debug.Log("SetCards Choice");
         _playCards.Clear();
         _playCards.Add(_playCard1);
         _playCards.Add(_playCard2);
@@ -69,14 +71,24 @@ public class ChoiceGroup : MonoBehaviour
 
         for (int i = 0; i < e.Cards.Count; i++)
         {
+            var card = e.Cards[i];
             var playCard = _playCards[i];
-            playCard.SetCard(e.Cards[i]);
-            UnityAction action = () =>
-            {
-                gameObject.SetActive(false);
-                StopTimer();
-            };
-            playCard.SetAction(action);
+            playCard.SetCard(card);
+
+            var button = playCard.gameObject.GetComponent<Button>();
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() => {
+                var req = new Pbm.ReqSelectOpenCard()
+                {
+                    SelectOpenCard = new Pbm.SelectOpenCard()
+                    {
+                        Card = card,
+                        Seat = Episode04.Instance.Seat
+                    }
+                };
+
+                GameManager.Network.Send(req);;
+            });
         }
     }
 }

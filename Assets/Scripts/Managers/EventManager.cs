@@ -24,6 +24,7 @@ public class EventManager
     public event EventHandler<Pbm.ResStreetBoss> OnResStreetBoss;
     public event EventHandler<Pbm.ResTimer> OnResTimer;
     public event EventHandler<Pbm.ResTableInformation> OnResTableInformation;
+    public event EventHandler<Pbm.ResChoiceCard> OnResChoiceCard;
 
     public void OnResSeatEvent(IMessage res) => OnResSeat?.Invoke(this, (Pbm.ResSeat)res);
     public void OnResBetEvent(IMessage res) => OnResBet?.Invoke(this, (Pbm.ResBet)res);
@@ -46,5 +47,6 @@ public class EventManager
     public void OnResStreetBossEvent(IMessage res) => OnResStreetBoss?.Invoke(this, (Pbm.ResStreetBoss)res);
     public void OnResTimerEvent(IMessage res) => OnResTimer?.Invoke(this, (Pbm.ResTimer)res);
     public void OnResTableInformationEvent(IMessage res) => OnResTableInformation?.Invoke(this, (Pbm.ResTableInformation)res);
+    public void OnResChoiceCardEvent(IMessage res) => OnResChoiceCard?.Invoke(this, (Pbm.ResChoiceCard)res);
 
 }

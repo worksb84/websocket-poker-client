@@ -53,55 +53,56 @@ namespace Pbm {
             "aWQYASABKAUSDAoEc2VhdBgCIAEoBRIMCgRyYXRlGAMgASgBEh8KCnNlYXRT",
             "dGF0dXMYBCABKA4yCy5TZWF0U3RhdHVzIh8KB1Jlc1NlYXQSFAoFc2VhdHMY",
             "ASADKAsyBS5TZWF0IhIKEFJlcUVudGVyR2FtZVJvb20iEgoQUmVzRW50ZXJH",
-            "YW1lUm9vbSIfCghSZXNSZWFkeRITCgRzZWF0GAEgASgLMgUuU2VhdCIOCgxS",
-            "ZXNHYW1lU3RhcnQiEAoOUmVzU2h1ZmZsZUNhcmQiKgoSUmVzRGVhbFN0cmVl",
-            "dDNDYXJkEhQKBWNhcmRzGAEgAygLMgUuQ2FyZCI6Cg5TZWxlY3RPcGVuQ2Fy",
-            "ZBITCgRzZWF0GAEgASgLMgUuU2VhdBITCgRjYXJkGAIgASgLMgUuQ2FyZCI8",
-            "ChFSZXFTZWxlY3RPcGVuQ2FyZBInCg5zZWxlY3RPcGVuQ2FyZBgBIAEoCzIP",
-            "LlNlbGVjdE9wZW5DYXJkIj0KEVJlc1NlbGVjdE9wZW5DYXJkEigKD3NlbGVj",
-            "dE9wZW5DYXJkcxgBIAMoCzIPLlNlbGVjdE9wZW5DYXJkIiQKDVJlc1N0cmVl",
-            "dEJvc3MSEwoEc2VhdBgBIAEoCzIFLlNlYXQiEAoOUmVzU3RhcnRTdHJlZXQi",
-            "PwoGUmVxQmV0EhMKBHNlYXQYASABKAsyBS5TZWF0EhEKA2JldBgCIAEoDjIE",
-            "LkJldBINCgVjaGlwcxgDIAEoByI/CgZSZXNCZXQSEwoEc2VhdBgBIAEoCzIF",
-            "LlNlYXQSEQoDYmV0GAIgASgOMgQuQmV0Eg0KBWNoaXBzGAMgASgHIjQKCERl",
-            "YWxDYXJkEhMKBHNlYXQYASABKAsyBS5TZWF0EhMKBGNhcmQYAiABKAsyBS5D",
-            "YXJkIisKC1Jlc0RlYWxDYXJkEhwKCWRlYWxDYXJkcxgBIAMoCzIJLkRlYWxD",
-            "YXJkIhIKEFJlc0J1bGxCZWFyUmVhZHkiRQoLUmVxQnVsbEJlYXISEwoEc2Vh",
-            "dBgBIAEoCzIFLlNlYXQSIQoLYnVsbEJlYXJCZXQYAiABKA4yDC5CdWxsQmVh",
-            "ckJldCIiCgtSZXNCdWxsQmVhchITCgRzZWF0GAEgASgLMgUuU2VhdCIwCglS",
-            "ZXNSZXN1bHQSEwoEc2VhdBgBIAEoCzIFLlNlYXQSDgoGYW1vdW50GAMgASgB",
-            "Ih8KCFJlcUxlYXZlEhMKBHNlYXQYASABKAsyBS5TZWF0Ih8KCFJlc0xlYXZl",
-            "EhMKBHNlYXQYASABKAsyBS5TZWF0IiIKC1JlcU1vdmVSb29tEhMKBHNlYXQY",
-            "ASABKAsyBS5TZWF0IiIKC1Jlc01vdmVSb29tEhMKBHNlYXQYASABKAsyBS5T",
-            "ZWF0Ij0KCUVuYWJsZUJldBIRCgNiZXQYASABKA4yBC5CZXQSDQoFY2hpcHMY",
-            "AiABKA0SDgoGZW5hYmxlGAMgASgIIi0KDFJlc0VuYWJsZUJldBIdCgllbmFi",
-            "bGVCZXQYASADKAsyCi5FbmFibGVCZXQidQoLVGFibGVDb25maWcSDwoHdGFi",
-            "bGVJZBgBIAEoCRITCgRnYW1lGAIgASgOMgUuR2FtZRIOCgZyZWdpb24YAyAB",
-            "KAkSDwoHbWF4U2VhdBgEIAEoBRIRCgljYXJkTGltaXQYBSABKAUSDAoEYW50",
-            "ZRgGIAEoDSIrCg9SZXNPdGhlclBsYXllcnMSGAoHcGxheWVycxgBIAMoCzIH",
-            "LlBsYXllciIoCg1SZXNKb2luUGxheWVyEhcKBnBsYXllchgBIAEoCzIHLlBs",
-            "YXllciIqCg9SZXNSZWdpc3RQbGF5ZXISFwoGcGxheWVyGAEgASgLMgcuUGxh",
-            "eWVyIi0KCFJlc1RpbWVyEhMKBHNlYXQYASABKAsyBS5TZWF0EgwKBHRpbWUY",
-            "AiABKAUqtQQKAklEEggKBE5vbmUQABILCgdUZXN0aW5nEAESDgoJUmVzX1Jl",
-            "YWR5EKAfEhIKDVJlc19HYW1lU3RhcnQQoR8SFAoPUmVzX1NodWZmbGVDYXJk",
-            "EKIfEhgKE1Jlc19EZWFsU3RyZWV0M0NhcmQQox8SFwoSUmVxX1NlbGVjdE9w",
-            "ZW5DYXJkEKQfEhcKElJlc19TZWxlY3RPcGVuQ2FyZBClHxITCg5SZXNfU3Ry",
-            "ZWV0Qm9zcxCmHxIUCg9SZXNfU3RhcnRTdHJlZXQQpx8SDAoHUmVxX0JldBCo",
-            "HxIMCgdSZXNfQmV0EKkfEhEKDFJlc19EZWFsQ2FyZBCqHxIWChFSZXNfQnVs",
-            "bEJlYXJSZWFkeRCrHxIRCgxSZXFfQnVsbEJlYXIQrB8SEQoMUmVzX0J1bGxC",
-            "ZWFyEK0fEg8KClJlc19SZXN1bHQQrh8SDgoJUmVxX0xlYXZlEK8fEg4KCVJl",
-            "c19MZWF2ZRCwHxIRCgxSZXFfTW92ZVJvb20QsR8SEQoMUmVzX01vdmVSb29t",
-            "ELIfEhIKDVJlc19FbmFibGVCZXQQsx8SFQoQUmVzX090aGVyUGxheWVycxC0",
-            "HxITCg5SZXNfSm9pblBsYXllchC1HxIOCglSZXNfVGltZXIQth8SFQoQUmVz",
-            "X1JlZ2lzdFBsYXllchC3HxINCghSZXNfU2VhdBC4HxIZChRSZXNfVGFibGVJ",
-            "bmZvcm1hdGlvbhC5HxISCg1SZXNfQ291bnRkb3duEI9OKj0KBEdhbWUSCQoF",
-            "c2V2ZW4QABIMCghidWxsQmVhchABEgwKCHNrZWxldG9uEAISDgoKbWlkdXNU",
-            "b3VjaBADKlkKA0JldBIJCgVidXlpbhAAEgkKBWNoZWNrEAESCQoFYmJpbmcQ",
-            "AhIICgRoYWxmEAMSCAoEZnVsbBAEEgkKBWFsbGluEAUSCAoEZm9sZBAGEggK",
-            "BGNhbGwQByo+CgtCdWxsQmVhckJldBIQCgxidWxsQmVhck5vbmUQABIICgRi",
-            "dWxsEAESCQoFc3dpbmcQAhIICgRiZWFyEAMqLAoKU2VhdFN0YXR1cxIJCgVy",
-            "ZWFkeRAAEggKBHBsYXkQARIJCgVsZWF2ZRACQg9aB3BrZy9wYm2qAgNQYm1i",
-            "BnByb3RvMw=="));
+            "YW1lUm9vbSIfCghSZXNSZWFkeRITCgRzZWF0GAEgASgLMgUuU2VhdCIkCg1S",
+            "ZXNDaG9pY2VDYXJkEhMKBHNlYXQYASABKAsyBS5TZWF0Ig4KDFJlc0dhbWVT",
+            "dGFydCIQCg5SZXNTaHVmZmxlQ2FyZCIqChJSZXNEZWFsU3RyZWV0M0NhcmQS",
+            "FAoFY2FyZHMYASADKAsyBS5DYXJkIjoKDlNlbGVjdE9wZW5DYXJkEhMKBHNl",
+            "YXQYASABKAsyBS5TZWF0EhMKBGNhcmQYAiABKAsyBS5DYXJkIjwKEVJlcVNl",
+            "bGVjdE9wZW5DYXJkEicKDnNlbGVjdE9wZW5DYXJkGAEgASgLMg8uU2VsZWN0",
+            "T3BlbkNhcmQiPQoRUmVzU2VsZWN0T3BlbkNhcmQSKAoPc2VsZWN0T3BlbkNh",
+            "cmRzGAEgAygLMg8uU2VsZWN0T3BlbkNhcmQiJAoNUmVzU3RyZWV0Qm9zcxIT",
+            "CgRzZWF0GAEgASgLMgUuU2VhdCIQCg5SZXNTdGFydFN0cmVldCI/CgZSZXFC",
+            "ZXQSEwoEc2VhdBgBIAEoCzIFLlNlYXQSEQoDYmV0GAIgASgOMgQuQmV0Eg0K",
+            "BWNoaXBzGAMgASgHIj8KBlJlc0JldBITCgRzZWF0GAEgASgLMgUuU2VhdBIR",
+            "CgNiZXQYAiABKA4yBC5CZXQSDQoFY2hpcHMYAyABKAciNAoIRGVhbENhcmQS",
+            "EwoEc2VhdBgBIAEoCzIFLlNlYXQSEwoEY2FyZBgCIAEoCzIFLkNhcmQiKwoL",
+            "UmVzRGVhbENhcmQSHAoJZGVhbENhcmRzGAEgAygLMgkuRGVhbENhcmQiEgoQ",
+            "UmVzQnVsbEJlYXJSZWFkeSJFCgtSZXFCdWxsQmVhchITCgRzZWF0GAEgASgL",
+            "MgUuU2VhdBIhCgtidWxsQmVhckJldBgCIAEoDjIMLkJ1bGxCZWFyQmV0IiIK",
+            "C1Jlc0J1bGxCZWFyEhMKBHNlYXQYASABKAsyBS5TZWF0IjAKCVJlc1Jlc3Vs",
+            "dBITCgRzZWF0GAEgASgLMgUuU2VhdBIOCgZhbW91bnQYAyABKAEiHwoIUmVx",
+            "TGVhdmUSEwoEc2VhdBgBIAEoCzIFLlNlYXQiHwoIUmVzTGVhdmUSEwoEc2Vh",
+            "dBgBIAEoCzIFLlNlYXQiIgoLUmVxTW92ZVJvb20SEwoEc2VhdBgBIAEoCzIF",
+            "LlNlYXQiIgoLUmVzTW92ZVJvb20SEwoEc2VhdBgBIAEoCzIFLlNlYXQiPQoJ",
+            "RW5hYmxlQmV0EhEKA2JldBgBIAEoDjIELkJldBINCgVjaGlwcxgCIAEoDRIO",
+            "CgZlbmFibGUYAyABKAgiLQoMUmVzRW5hYmxlQmV0Eh0KCWVuYWJsZUJldBgB",
+            "IAMoCzIKLkVuYWJsZUJldCJ1CgtUYWJsZUNvbmZpZxIPCgd0YWJsZUlkGAEg",
+            "ASgJEhMKBGdhbWUYAiABKA4yBS5HYW1lEg4KBnJlZ2lvbhgDIAEoCRIPCgdt",
+            "YXhTZWF0GAQgASgFEhEKCWNhcmRMaW1pdBgFIAEoBRIMCgRhbnRlGAYgASgN",
+            "IisKD1Jlc090aGVyUGxheWVycxIYCgdwbGF5ZXJzGAEgAygLMgcuUGxheWVy",
+            "IigKDVJlc0pvaW5QbGF5ZXISFwoGcGxheWVyGAEgASgLMgcuUGxheWVyIioK",
+            "D1Jlc1JlZ2lzdFBsYXllchIXCgZwbGF5ZXIYASABKAsyBy5QbGF5ZXIiLQoI",
+            "UmVzVGltZXISEwoEc2VhdBgBIAEoCzIFLlNlYXQSDAoEdGltZRgCIAEoBSrK",
+            "BAoCSUQSCAoETm9uZRAAEgsKB1Rlc3RpbmcQARIOCglSZXNfUmVhZHkQoB8S",
+            "EgoNUmVzX0dhbWVTdGFydBChHxIUCg9SZXNfU2h1ZmZsZUNhcmQQoh8SGAoT",
+            "UmVzX0RlYWxTdHJlZXQzQ2FyZBCjHxIXChJSZXFfU2VsZWN0T3BlbkNhcmQQ",
+            "pB8SFwoSUmVzX1NlbGVjdE9wZW5DYXJkEKUfEhMKDlJlc19TdHJlZXRCb3Nz",
+            "EKYfEhQKD1Jlc19TdGFydFN0cmVldBCnHxIMCgdSZXFfQmV0EKgfEgwKB1Jl",
+            "c19CZXQQqR8SEQoMUmVzX0RlYWxDYXJkEKofEhYKEVJlc19CdWxsQmVhclJl",
+            "YWR5EKsfEhEKDFJlcV9CdWxsQmVhchCsHxIRCgxSZXNfQnVsbEJlYXIQrR8S",
+            "DwoKUmVzX1Jlc3VsdBCuHxIOCglSZXFfTGVhdmUQrx8SDgoJUmVzX0xlYXZl",
+            "ELAfEhEKDFJlcV9Nb3ZlUm9vbRCxHxIRCgxSZXNfTW92ZVJvb20Qsh8SEgoN",
+            "UmVzX0VuYWJsZUJldBCzHxIVChBSZXNfT3RoZXJQbGF5ZXJzELQfEhMKDlJl",
+            "c19Kb2luUGxheWVyELUfEg4KCVJlc19UaW1lchC2HxIVChBSZXNfUmVnaXN0",
+            "UGxheWVyELcfEg0KCFJlc19TZWF0ELgfEhkKFFJlc19UYWJsZUluZm9ybWF0",
+            "aW9uELkfEhMKDlJlc19DaG9pY2VDYXJkELofEhIKDVJlc19Db3VudGRvd24Q",
+            "j04qPQoER2FtZRIJCgVzZXZlbhAAEgwKCGJ1bGxCZWFyEAESDAoIc2tlbGV0",
+            "b24QAhIOCgptaWR1c1RvdWNoEAMqWQoDQmV0EgkKBWJ1eWluEAASCQoFY2hl",
+            "Y2sQARIJCgViYmluZxACEggKBGhhbGYQAxIICgRmdWxsEAQSCQoFYWxsaW4Q",
+            "BRIICgRmb2xkEAYSCAoEY2FsbBAHKj4KC0J1bGxCZWFyQmV0EhAKDGJ1bGxC",
+            "ZWFyTm9uZRAAEggKBGJ1bGwQARIJCgVzd2luZxACEggKBGJlYXIQAyosCgpT",
+            "ZWF0U3RhdHVzEgkKBXJlYWR5EAASCAoEcGxheRABEgkKBWxlYXZlEAJCD1oH",
+            "cGtnL3BibaoCA1BibWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Pbm.ID), typeof(global::Pbm.Game), typeof(global::Pbm.Bet), typeof(global::Pbm.BullBearBet), typeof(global::Pbm.SeatStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -124,6 +125,7 @@ namespace Pbm {
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ReqEnterGameRoom), global::Pbm.ReqEnterGameRoom.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResEnterGameRoom), global::Pbm.ResEnterGameRoom.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResReady), global::Pbm.ResReady.Parser, new[]{ "Seat" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResChoiceCard), global::Pbm.ResChoiceCard.Parser, new[]{ "Seat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResGameStart), global::Pbm.ResGameStart.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResShuffleCard), global::Pbm.ResShuffleCard.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Pbm.ResDealStreet3Card), global::Pbm.ResDealStreet3Card.Parser, new[]{ "Cards" }, null, null, null, null),
@@ -186,6 +188,7 @@ namespace Pbm {
     [pbr::OriginalName("Res_RegistPlayer")] ResRegistPlayer = 4023,
     [pbr::OriginalName("Res_Seat")] ResSeat = 4024,
     [pbr::OriginalName("Res_TableInformation")] ResTableInformation = 4025,
+    [pbr::OriginalName("Res_ChoiceCard")] ResChoiceCard = 4026,
     [pbr::OriginalName("Res_Countdown")] ResCountdown = 9999,
   }
 
@@ -5241,6 +5244,213 @@ namespace Pbm {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ResChoiceCard : pb::IMessage<ResChoiceCard>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ResChoiceCard> _parser = new pb::MessageParser<ResChoiceCard>(() => new ResChoiceCard());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ResChoiceCard> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResChoiceCard() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResChoiceCard(ResChoiceCard other) : this() {
+      seat_ = other.seat_ != null ? other.seat_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResChoiceCard Clone() {
+      return new ResChoiceCard(this);
+    }
+
+    /// <summary>Field number for the "seat" field.</summary>
+    public const int SeatFieldNumber = 1;
+    private global::Pbm.Seat seat_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Pbm.Seat Seat {
+      get { return seat_; }
+      set {
+        seat_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ResChoiceCard);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ResChoiceCard other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Seat, other.Seat)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (seat_ != null) hash ^= Seat.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (seat_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Seat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (seat_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Seat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (seat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Seat);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ResChoiceCard other) {
+      if (other == null) {
+        return;
+      }
+      if (other.seat_ != null) {
+        if (seat_ == null) {
+          Seat = new global::Pbm.Seat();
+        }
+        Seat.MergeFrom(other.Seat);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (seat_ == null) {
+              Seat = new global::Pbm.Seat();
+            }
+            input.ReadMessage(Seat);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (seat_ == null) {
+              Seat = new global::Pbm.Seat();
+            }
+            input.ReadMessage(Seat);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ResGameStart : pb::IMessage<ResGameStart>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -5255,7 +5465,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5416,7 +5626,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5577,7 +5787,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5764,7 +5974,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6017,7 +6227,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6224,7 +6434,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6411,7 +6621,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6618,7 +6828,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6779,7 +6989,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7060,7 +7270,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7341,7 +7551,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7594,7 +7804,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7781,7 +7991,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7942,7 +8152,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8186,7 +8396,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8393,7 +8603,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8637,7 +8847,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8844,7 +9054,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9051,7 +9261,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9258,7 +9468,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9465,7 +9675,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9737,7 +9947,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9924,7 +10134,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10307,7 +10517,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10494,7 +10704,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10701,7 +10911,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10908,7 +11118,7 @@ namespace Pbm {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Pbm.PokerReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

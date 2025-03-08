@@ -240,4 +240,9 @@ public class Seat : MonoBehaviour
         playCard.SetCard(dealCard.Card);
         playCard.SetFlip(true);
     }
+
+    internal void ChoiceComplate()
+    {
+        StopTimer();
+    }
 }
