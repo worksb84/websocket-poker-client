@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using DG.Tweening;
-using Pbm;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +14,6 @@ public class Seat : MonoBehaviour
 
     [Header("Images")]
     [SerializeField] private Image _profileImage;
-    [SerializeField] private Image _betImage;
     [SerializeField] private Image _bossImage;
 
     [Header("Texts")]
@@ -26,6 +24,7 @@ public class Seat : MonoBehaviour
     [SerializeField] private TMP_Text _resultAmount;
     [SerializeField] private TMP_Text _waitPlayerText;
     [SerializeField] private TMP_Text _timerText;
+    [SerializeField] private TMP_Text _moneyText;
 
     [Header("GameObjects")]
     [SerializeField] private GameObject _cardGroup;
@@ -33,6 +32,17 @@ public class Seat : MonoBehaviour
     [SerializeField] private GameObject _resultGroup;
     [SerializeField] private Slider _slider;
     [SerializeField] private GameObject _dealCardGroup;
+    [SerializeField] private GameObject _turn;
+    [SerializeField] private GameObject _moneyGroup;
+
+    [Header("Betting GameObjects")]
+    [SerializeField] private GameObject _check;
+    [SerializeField] private GameObject _ante;
+    [SerializeField] private GameObject _call;
+    [SerializeField] private GameObject _half;
+    [SerializeField] private GameObject _full;
+    [SerializeField] private GameObject _allin;
+    [SerializeField] private GameObject _fold;
 
     public bool IsSelf { get { return _isSelf; } set { _isSelf = value; } }
     public Pbm.Seat Seat_ { get { return _seat; } set { _seat = value; } }
@@ -40,20 +50,30 @@ public class Seat : MonoBehaviour
     public TMP_Text NameText { get { return _nameText; } set { _nameText = value; } }
     public TMP_Text RateText { get { return _rateText; } set { _rateText = value; } }
     public TMP_Text PreviousBetAmount { get { return _previousBetAmount; } set { _previousBetAmount = value; } }
-    public Image BetImage { get { return _betImage; } set { _betImage = value; } }
     public Image BossImage { get { return _bossImage; } set { _bossImage = value; } }
     public TMP_Text ResultText { get { return _resultText; } set { _resultText = value; } }
     public TMP_Text ResultAmount { get { return _resultAmount; } set { _resultAmount = value; } }
     public TMP_Text WaitPlayerText { get { return _waitPlayerText; } set { _waitPlayerText = value; } }
+    public TMP_Text MoneyText { get { return _moneyText; } set { _moneyText = value; } }
     public GameObject CardGroup { get { return _cardGroup; } set { _cardGroup = value; } }
     public GameObject TimerGroup { get { return _timerGroup; } set { _timerGroup = value; } }
     public GameObject ResultGroup { get { return _resultGroup; } set { _resultGroup = value; } }
+    public GameObject MoneyGroup { get { return _moneyGroup; } set { _moneyGroup = value; } }
     public Slider Slider { get { return _slider; } set { _slider = value; } }
     public TMP_Text TimerText { get { return _timerText; } set { _timerText = value; } }
     public GameObject DealCardGroup { get { return _dealCardGroup; } set { _dealCardGroup = value; } }
+    public GameObject Turn { get { return _turn; } set { _turn = value; } }
+    private GameObject Check { get { return _check; } set { _check = value; } }
+    private GameObject Ante { get { return _ante; } set { _ante = value; } }
+    private GameObject Call { get { return _call; } set { _call = value; } }
+    private GameObject Half { get { return _half; } set { _half = value; } }
+    private GameObject Full { get { return _full; } set { _full = value; } }
+    private GameObject Allin { get { return _allin; } set { _allin = value; } }
+    private GameObject Fold { get { return _fold; } set { _fold = value; } }
 
     private int _dealCardCount = 0;
     private List<GameObject> _dealCards = new();
+    private Dictionary<Pbm.Bet, GameObject> _bets = new();
 
     private void OnEnable()
     {
@@ -74,6 +94,19 @@ public class Seat : MonoBehaviour
     private void Initialize()
     {
         _seat = new Pbm.Seat() { Seat_ = -1, Uid = -1, Rate = 0 };
+        _bets.Clear();
+
+        _bets.Add(Pbm.Bet.Check, _check);
+        _bets.Add(Pbm.Bet.Bbing, _ante);
+        _bets.Add(Pbm.Bet.Call, _call);
+        _bets.Add(Pbm.Bet.Half, _half);
+        _bets.Add(Pbm.Bet.Full, _full);
+        _bets.Add(Pbm.Bet.Allin, _allin);
+        _bets.Add(Pbm.Bet.Fold, _fold);
+
+        ResetBet();
+        _turn.SetActive(false);
+
         _dealCards.Clear();
         _dealCardCount = 0;
         _profileImage.sprite = null;
@@ -82,7 +115,6 @@ public class Seat : MonoBehaviour
         _previousBetAmount.text = string.Empty;
 
         _profileImage.gameObject.SetActive(false);
-        _betImage.gameObject.SetActive(false);
         _bossImage.gameObject.SetActive(false);
         _nameText.gameObject.SetActive(false);
         _rateText.gameObject.SetActive(false);
@@ -95,7 +127,7 @@ public class Seat : MonoBehaviour
         _resultGroup.SetActive(false);
     }
 
-    private void Event_OnResTimer(object sender, ResTimer e)
+    private void Event_OnResTimer(object sender, Pbm.ResTimer e)
     {
         if (e.Seat.Seat_ == _seat.Seat_)
         {
@@ -139,7 +171,7 @@ public class Seat : MonoBehaviour
         }
     }
 
-    internal void SetOpenCard(SelectOpenCard selectOpenCard)
+    internal void SetOpenCard(Pbm.SelectOpenCard selectOpenCard)
     {
         if (_isSelf)
         {
@@ -164,7 +196,7 @@ public class Seat : MonoBehaviour
         }
     }
 
-    internal void SetCard(ResDealStreet3Card e)
+    internal void SetCard(Pbm.ResDealStreet3Card e)
     {
         for (int i = 0; i < e.Cards.Count; i++)
         {
@@ -173,9 +205,20 @@ public class Seat : MonoBehaviour
         }
     }
 
-    internal void SetBet(ResBet e)
+    private void ResetBet()
     {
-        _betImage.gameObject.SetActive(true);
+        foreach (var (_, bet) in _bets)
+        {
+            bet.SetActive(false);
+        }
+    }
+
+    internal void SetBet(Pbm.ResBet e)
+    {
+        ResetBet();
+        var icon = _bets[e.Bet];
+        icon.SetActive(true);
+        //_betImage.gameObject.SetActive(true);
         _previousBetAmount.text = e.Chips.ToString();
         StopTimer();
     }
@@ -190,7 +233,7 @@ public class Seat : MonoBehaviour
         _bossImage.gameObject.SetActive(false);
     }
 
-    internal void SetSeat(Player player, bool isSelf)
+    internal void SetSeat(Pbm.Player player, bool isSelf)
     {
         _seat = player.Seat;
         _isSelf = isSelf;
@@ -232,7 +275,7 @@ public class Seat : MonoBehaviour
         _dealCardCount++;
     }
 
-    internal void SetOpenDealCard(DealCard dealCard)
+    internal void SetOpenDealCard(Pbm.DealCard dealCard)
     {
         //var idx = _dealCards.FindIndex(x => x.GetComponent<PlayCard>().Card_ != null && x.GetComponent<PlayCard>().Card_.S == dealCard.Card.S)
         var card = _dealCards[_dealCards.Count - 1];
