@@ -50,9 +50,9 @@ public class ChoiceGroup : MonoBehaviour
 
     private void StartTimer(int v)
     {
-        _timer.sizeDelta = new Vector2(700f, 15f);
+        _timer.sizeDelta = new Vector2(700f, 5f);
         _timer.gameObject.SetActive(true);
-        _timer.DOSizeDelta(new Vector2(0f, 15f), v).SetEase(Ease.Linear);
+        _timer.DOSizeDelta(new Vector2(0f, 5f), v).SetEase(Ease.Linear);
     }
 
     private void StopTimer()

@@ -158,7 +158,7 @@ public class Episode04 : MonoBehaviour
 
     private void Event_OnResDealStreet3Card(object sender, ResDealStreet3Card e)
     {
-        _choiceGroup.gameObject.SetActive(false);
+        _shuffleGroup.gameObject.SetActive(false);
         UnityAction action = (() =>
         {
             _choiceGroup.gameObject.SetActive(true);

@@ -127,7 +127,7 @@ public class Seat : MonoBehaviour
         _rateText.text = string.Empty;
         _previousBetAmount.text = string.Empty;
 
-        //_profileImage.gameObject.SetActive(false);
+        _profileImage.gameObject.SetActive(false);
         _bossImage.gameObject.SetActive(false);
         _nameText.gameObject.SetActive(false);
         _rateText.gameObject.SetActive(false);
@@ -314,7 +314,7 @@ public class Seat : MonoBehaviour
         var cX = bound.center.x;
         var cY = bound.center.y;
 
-        var count = Random.Range(5, 20);
+        var count = Random.Range(5, 10);
 
         for (int i = 0; i < count; i++)
         {
