@@ -1,5 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
+using System.Xml;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -34,6 +37,7 @@ public class Seat : MonoBehaviour
     [SerializeField] private GameObject _dealCardGroup;
     [SerializeField] private GameObject _turn;
     [SerializeField] private GameObject _moneyGroup;
+    [SerializeField] private GameObject _chipsGroup;
 
     [Header("Betting GameObjects")]
     [SerializeField] private GameObject _check;
@@ -62,6 +66,7 @@ public class Seat : MonoBehaviour
     public Slider Slider { get { return _slider; } set { _slider = value; } }
     public TMP_Text TimerText { get { return _timerText; } set { _timerText = value; } }
     public GameObject DealCardGroup { get { return _dealCardGroup; } set { _dealCardGroup = value; } }
+    public GameObject ChipsGroup { get { return _chipsGroup; } set { _chipsGroup = value; } }
     public GameObject Turn { get { return _turn; } set { _turn = value; } }
     private GameObject Check { get { return _check; } set { _check = value; } }
     private GameObject Ante { get { return _ante; } set { _ante = value; } }
@@ -74,6 +79,7 @@ public class Seat : MonoBehaviour
     private int _dealCardCount = 0;
     private List<GameObject> _dealCards = new();
     private Dictionary<Pbm.Bet, GameObject> _bets = new();
+    private Dictionary<string, int> _chips = new();
 
     private void OnEnable()
     {
@@ -93,6 +99,13 @@ public class Seat : MonoBehaviour
 
     private void Initialize()
     {
+        _chips.Clear();
+        _chips.Add("Chips1", 1);
+        _chips.Add("Chips10", 10);
+        _chips.Add("Chips100", 100);
+        _chips.Add("Chips10000", 10000);
+        _chips.Add("Chips1000000", 1000000);
+
         _seat = new Pbm.Seat() { Seat_ = -1, Uid = -1, Rate = 0 };
         _bets.Clear();
 
@@ -106,15 +119,15 @@ public class Seat : MonoBehaviour
 
         ResetBet();
         _turn.SetActive(false);
-
+        _moneyGroup.SetActive(false);
         _dealCards.Clear();
         _dealCardCount = 0;
-        _profileImage.sprite = null;
+        //_profileImage.sprite = null;
         _nameText.text = string.Empty;
         _rateText.text = string.Empty;
         _previousBetAmount.text = string.Empty;
 
-        _profileImage.gameObject.SetActive(false);
+        //_profileImage.gameObject.SetActive(false);
         _bossImage.gameObject.SetActive(false);
         _nameText.gameObject.SetActive(false);
         _rateText.gameObject.SetActive(false);
@@ -220,6 +233,7 @@ public class Seat : MonoBehaviour
         icon.SetActive(true);
         //_betImage.gameObject.SetActive(true);
         _previousBetAmount.text = e.Chips.ToString();
+        StartCoroutine(SetThrowChip());
         StopTimer();
     }
 
@@ -288,4 +302,47 @@ public class Seat : MonoBehaviour
     {
         StopTimer();
     }
+
+
+    internal IEnumerator SetThrowChip()
+    {
+        yield return new WaitForSeconds(0.01f);
+        var rect = _cardGroup.GetComponent<RectTransform>();
+        var root = gameObject.transform.root.root.GetComponent<RectTransform>();
+
+        var bound = RectTransformUtility.CalculateRelativeRectTransformBounds(root, rect);
+        var cX = bound.center.x;
+        var cY = bound.center.y;
+
+        var count = Random.Range(5, 20);
+
+        for (int i = 0; i < count; i++)
+        {
+            var random = new System.Random();
+            var rIndex = random.Next(_chips.Count);
+            var element = _chips.ElementAt(rIndex);
+
+            var chips = GameManager.Resource.Instantiate($"Prefabs/{element.Key}");
+            chips.transform.SetParent(_chipsGroup.transform, false);
+            var chipsRect = chips.GetComponent<RectTransform>();
+            var rCx = Random.Range(-10f, 10f);
+            var rCy = Random.Range(-10f, 10f);
+            chipsRect.anchoredPosition = new Vector2(cX + rCx, cY + rCy);
+            chipsRect.localScale = Vector3.one * 0.85f;
+
+            // X -160 160
+            // Y 400 50
+
+            rCx = Random.Range(-140f, 140f);
+            rCy = Random.Range(380f, 150f);
+
+            var seq = DOTween.Sequence();
+            seq.Append(chipsRect.DOAnchorPos(new Vector2(rCx, rCy), 0.7f).SetEase(Ease.OutCubic));
+            seq.Join(chipsRect.DORotate(new Vector3(0f, 0f, Random.Range(-20f, 20f)), 0.7f).SetEase(Ease.OutCubic));
+            seq.Play();
+        }
+
+
+    }
+
 }
